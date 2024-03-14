@@ -1,4 +1,5 @@
 # Logica-programacao-js
+
 Treinando lógica de programação com JS
 
 ## operadores-aritmeticos.js
@@ -28,3 +29,35 @@ Em cada uma das operaçõe, temos um operador aritmético:
 * `*` -> multiplicação
 * `/` -> divisão
 * `%` -> resto
+
+## operadores-atribuicao.js
+
+~~~js
+let numero=10
+~~~
+
+Declaramos a variável `numero` usando a palara `let`, pois essa variável será **reatribuída** ao longo do nosso código.
+
+Em seguida, fazemos uma série de reatribuíções usando  os operadores de atribuíção.
+
+~~~js
+console.log(`O numero é inicialmente igual a ${numero}`);
+console.log(`Após reatribuir somando o número 10: ${numero += 10}`);
+console.log(`Reatribuindo e subtraindo o número 10: ${numero -= 10}`);
+console.log(`Reatribuindo e multiplicando o número 10: ${numero *= 10}`);
+console.log(`Reatribuindo e dividindo o número 10: ${numero /= 10}`);
+console.log(`Reatribuindo para o resto da divisão por 10: ${numero %= 10}`);
+console.log(`Incrementando o número em 1: ${++ numero}`)
+console.log(`Decrementando o número em 1: ${-- numero }`)
+console.log(`O número final é igual a ${numero}`);
+~~~
+
+operadores de atribuíção:
+
+* `+=` -> reatribuíção com soma
+* `-=` -> reatribuíção com subtração
+* `*=` -> atribuíção com multiplicação
+* `/=` -> atribuíção com divisão
+* `%=` -> atribuíção com resto da divisão
+* `++` -> atribuíção com **incremento 1** (pode ser *pré* ou *pós* incrementado). Ex: `numero ++` (pós-incremento) ou `++ numero` (pré-incremento)
+* `--` -> atribuíção com **decremento 1** (pode ser *pré* ou *pós* decrementado).  Ex: `numero --` (pós-decremento) ou `-- numero` (pré-decremento)
