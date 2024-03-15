@@ -8,3 +8,4 @@ console.log(`A subtracao dos números é ${numero1 - numero2}`);
 console.log(`A multiplicacao dos números é ${numero1 * numero2}`);
 console.log(`A divisao dos números é ${numero1 / numero2}`);
 console.log(`O resto dos números é ${numero1 % numero2}`);
+console.log(`O número1 elevado à potência  do outro é ${numero1 **numero2}`);
