@@ -63,7 +63,6 @@ operadores de atribuíção:
 * `++` -> atribuíção com **incremento 1** (pode ser *pré* ou *pós* incrementado). Ex: `numero ++` (pós-incremento) ou `++ numero` (pré-incremento)
 * `--` -> atribuíção com **decremento 1** (pode ser *pré* ou *pós* decrementado).  Ex: `numero --` (pós-decremento) ou `-- numero` (pré-decremento)
 
-
 ## operadores-comparacao.js
 
 Neste arquivo conhecemos os operadores de comparação e a estreutura lógica de decisao **if-else**.
@@ -78,7 +77,6 @@ Neste arquivo conhecemos os operadores de comparação e a estreutura lógica de
 * `>=`  -> Compara se o valor da condição é maior ou igual a outra
 * `>=`  -> Compara se o valor da condição é menor ou igual outra
 
-
 ### Estrutura **if-else**
 
     Esta estrutura exibe no console se a condição testestada é `true` (verdadeira) ou `false` (falso).
@@ -92,11 +90,12 @@ if (condicao){
     console.log('FALSO/DISCORDO')
 }
 
-desafio1.js
-Escreva um código em JavaScript que resolva o problema descrito no livro Lógica de Programação I, p. 20, em que temos que obter as 3 notas de um aluno, calcular a média e exibir se o aluno foi aprovado, reprovado ou se ficou para exame. Não é necessário ler as notas, você pode defini-las com variáveis.
+##desafio1.js
+Escreva um código em JavaScript que resolva o problema descrito no livro **Lógica de Programação I, p. 20**, em que temos que obter as 3 notas de um aluno, calcular a média e exibir se o aluno foi aprovado, reprovado ou se ficou para exame. Não é necessário ler as notas, você pode defini-las com variáveis.
 
 Você precisará utilizar uma estrutura de decisão composta, como a seguir:
 
+~~~js
 if (condicao1) {
     // código da condição 1
 } else if (condicao2) {
@@ -104,7 +103,10 @@ if (condicao1) {
 } else {
     // código se nenhuma das condições for verdadeira
 }
-desafio2.js
+~~~
+
+## desafio2.js
+
 Crie um programa que calcule o Índice de Massa Corporal (IMC) de uma pessoa.
 
 Orientações:
@@ -120,5 +122,28 @@ O IMC é apenas uma medida geral e não leva em consideração a composição co
 
 Para mais informações:
 
-Organização Mundial da Saúde (OMS): https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
-~~~
+Organização Mundial da Saúde (OMS): <https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight>
+
+
+## desafio3.js
+
+Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. O usuário deve digitar a temperatura a ser convertida, a escala da temperatura atual e a escala para o qual o valor deve ser convertido.
+
+Entradas (3): valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão).
+
+Saída (1): valor convertido na escala de conversão.
+
+### Fórmulas:
+
+De | Para | Fórmula
+--- | --- | ----
+Celsius | Fahrenheit | tF = (tC * 9/5) + 32
+Celsius | Kelvin | tK = tC + 273.15
+Fahrenheit | Celsius | tC = (tF - 32) * 5/9
+Fahrenheit | Kelvin | tK = (tF + 459.67) * 5/9
+Kelvin | Celsius | tC = tK - 273.15
+Kelvin | Fahrenheit | tF = tK * 9/5 - 459.67
+
+### Problema adicional
+
+Como executar dois "programas" na mesma página?
