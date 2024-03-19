@@ -77,7 +77,7 @@ Neste arquivo conhecemos os operadores de comparação e a estreutura lógica de
 * `>=`  -> Compara se o valor da condição é maior ou igual a outra
 * `>=`  -> Compara se o valor da condição é menor ou igual outra
 
-### Estrutura **if-else**
+### Estrutura *if-else*
 
     Esta estrutura exibe no console se a condição testestada é `true` (verdadeira) ou `false` (falso).
 
@@ -133,7 +133,7 @@ Entradas (3): valor atual da temperatura, escala atual da temperatura, escala pa
 
 Saída (1): valor convertido na escala de conversão.
 
-### Fórmulas:
+### Fórmulas
 
 De | Para | Fórmula
 --- | --- | ----
