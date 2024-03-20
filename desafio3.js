@@ -24,22 +24,31 @@ const calculoCelsius1 = (temperatura * 9) / 5 + 32,
   else if (atual === "c" && conversao === "k") {
      window.alert(`A temperatura atual em Kelvin é ${calculoCelsius2}`);
 
-       } else if (atual === "f" && conversao === "c") {
+       } else if(atual === "c" && conversao === "c"){
+        window.alert(`A escala selecionada ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
+       }
+       
+       
+       else if (atual === "f" && conversao === "c") {
     window.alert(`A temperatura atual em Celsius é ${calculoFahrenheit1.toFixed(1)}`);
 
   } else if (atual === "f" && conversao === "k") {
     window.alert(`A temperatura atual em Fahrenheit é ${calculoFahrenheit2.toFixed(1)}`);
 
-  } else if (atual === "k" && conversao === "c") {
+  } else if(atual === "f" && conversao === "f"){
+    window.alert(`A escala selecionada ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`)
+   }
+  
+  else if (atual === "k" && conversao === "c") {
     window.alert(`A temperatura atual em Celsius é ${calculoKelvin1.toFixed(1)}`);
 
   } else if (atual === "k" && conversao === "f") {
     window.alert(`A temperatura atual em Fahrenheit é ${calculoKelvin2.toFixed(1)}`);
 
-// caso não seja kfc
-  }else if( atual == !"c","f","k"){
-    window.alert('A escala digitada não esta presente em nossa tabela')
-  }
+
+  }   else if(atual === "k" && conversao === "k"){
+    window.alert(`A escala selecionada ${conversao}. Selecione uma escala de CONVERSÃO diferente da ATUAL.`);
+   }
   //else final
   else {
     window.alert(
