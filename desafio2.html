@@ -7,26 +7,56 @@
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
     <style>
-        
+       
+            
         body{
-            color: blue;
+            color: rgb(0, 0, 0);
             background-color: rgb(4, 253, 232);
             font-size: 20px; 
-        } 
+            border-radius: 50px;
+        }
+         
         button{
             background-color: aqua;
             border-radius: 10px;
         }
+        input{
+           background-color: rgb(4, 253, 232);
+           color: rgb(0, 0, 0);
+       
+        }
     </style>
 </head>
 <body>
-    <h1>Tabela imc</h1>
-    <button type="button" id="btnimc" onclick="calculeIMC()">Botão de calcular imc</button>
+    <h1>Calculadora imc</h1>
+    <button type="button" id="btIMC" onclick="calculeIMC()">Botão de calcular imc</button>
+
+    <label for="peso">Peso:</label>
+    <input type="number" name="" id="peso" step="0.5" min="0" max="1000">
+
+    <label for="altura">Altura:</label>
+    <input type="number" name="" id="altura" step="0.1" min="0" max="3">
+    
+    <button type="button" onclick="">Calcular IMC</button>
+    <button type="button">Limpar</button>
+    <script>
+        document.querySelector('#btIMC').addEventListener('click', function(){
+            const peso = document.querySelector('#peso').value;
+            const altura = document.querySelector('#altura').value;
+            const imc = calculeImc(peso, altura);  
+            
+            console.log(imc)
+     });
+    </script>
+
+
+
+
     <p>Neste site há um programa para calcular o seu imc</p>
 
 
     <h2>Conversor de temperatura</h2>
-    <button type="button" onclick="calculeconversao()"> Botão de conversão</button>
+    <button type="button" onclick="calculeConversao()"> Botão de conversão</button>
     <p>Nesta página irei criar um conversor de de temperatura</p>
     <p>Foi um sacrifício para fazer isso, mas no final eu consegui</p>
 
