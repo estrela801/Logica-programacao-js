@@ -1,11 +1,15 @@
-function calculeConversao(temperatura, atual, ){
+function calculeConversao(temperatura, atual, conversao){
 
 
-  const temperatura = parseFloat(window.prompt("Digite a temperatura")),
-    atual = window.prompt("Digite a escala atual, Celsius (c), Fanrenheit (f) e Kelvin (k)"),
-    conversao = window.prompt("Digite a unidade desejada, Celsius (c), Fahrenheit (f) ou Kelvin (k)");
+  // const temperatura = parseFloat(window.prompt("Digite a temperatura")),
+  //   atual = window.prompt("Digite a escala atual, Celsius (c), Fanrenheit (f) e Kelvin (k)"),
+  //   conversao = window.prompt("Digite a unidade desejada, Celsius (c), Fahrenheit (f) ou Kelvin (k)");
   
-  
+  let temperatura;
+  let atual;
+  let conversao;
+
+
   const calculoCelsius1 = (temperatura * 9) / 5 + 32,
     calculoCelsius2 = temperatura + 273.15,
     calculoFahrenheit1 = ((temperatura - 32) * 5) / 9,

@@ -30,7 +30,7 @@
 
 <body>
     <h1>Calculadora imc</h1>
-    <button type="button" id="btIMC" onclick="calculeIMC()">Botão de calcular imc</button>
+    <button type="button" id="btIMC" onclick="calculeIMC(peso, altura)">Botão de calcular imc</button>
 
     <label for="peso">Peso:</label>
     <input type="number" name="" id="peso" step="0.5" min="0" max="1000">
@@ -72,7 +72,7 @@
     <label for="conversao">Digite a unidade desejada, Celsius (c), Fahrenheit (f) ou Kelvin (k)</label>
     <input type="text" id="conversao">
     <br><br>
-    <button type="button" onclick="calculeConversao()"> Botão de conversão</button>
+    <button type="button" onclick="calculeConversao(temperatura, atual,conversao)"> Botão de conversão</button>
 
  
 
