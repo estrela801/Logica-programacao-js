@@ -1,99 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Operadores lógicos</title>
     <script src="desafio2.js"></script>
-    <script src="desafio3.js"></script>
+    <!-- <script src="desafio3.js"></script> -->
     <style>
-        body {
-            color: rgb(0, 0, 0);
-            background-color: rgb(4, 253, 232);
-            font-size: 20px;
-            border-radius: 50px;
-        }
+      body {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        border-radius: 50px;
+      }
 
-        button {
-            background-color: aqua;
-            border-radius: 10px;
-        }
+      button {
+        background-color: aqua;
+        border-radius: 10px;
+      }
 
-        input {
-            background-color: rgb(4, 253, 232);
-            color: rgb(0, 0, 0);
-
-        }
+      input {
+        background-color: rgb(4, 253, 232);
+        color: rgb(0, 0, 0);
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Calculadora imc</h1>
-    <button type="button" id="btIMC" onclick="calculeIMC(peso, altura)">Botão de calcular imc</button>
 
-    <label for="peso">Peso:</label>
-    <input type="number" name="" id="peso" step="0.5" min="0" max="1000">
+    <form action="">
+      <label for="peso">Peso:</label>
+      <input type="number" name="" id="peso" step="0.5" min="0" max="1000" />
 
-    <label for="altura">Altura:</label>
-    <input type="number" name="" id="altura" step="0.1" min="0" max="3">
+      <label for="altura">Altura:</label>
+      <input type="number" name="" id="altura" step="0.1" min="0" max="3" />
 
-    <button type="button" onclick="">Calcular IMC</button>
-    <button type="button">Limpar</button>
+      <!--   -->
+      <button
+        type="reset"
+        id="limpar"
+        onclick="document.querySelector('#resultadoIMC').innerHTML = '';"
+      >
+        Limpar
+      </button>
+
+      <button type="button" id="btIMC">Calcular IMC</button>
+      <div id="resultadoIMC"></div>
+    </form>
+
     <script>
-        document.querySelector('#btIMC').addEventListener('click', function () {
-            const peso = document.querySelector('#peso').value;
-            const altura = document.querySelector('#altura').value;
-            const imc = calculeImc(peso, altura);
+      document.querySelector("#btIMC").addEventListener("click", function () {
+        const peso = document.querySelector("#peso").value;
+        const altura = document.querySelector("#altura").value;
+        const imc = calculeIMC(peso, altura);
+        console.log(imc);
+        document.querySelector("#resultadoIMC").innerHTML = imc;
+      });
 
-            console.log(imc)
-        });
+      // document.querySelector('#limpar').addEventListener('click', function () {
+      //document.querySelector('#resultadoIMC').innerHTML = "";
+      //  });
     </script>
 
-
-
-
     <p>Neste site há um programa para calcular o seu imc</p>
-
 
     <h2>Conversor de temperatura</h2>
 
     <p>Nesta página irei criar um conversor de de temperatura</p>
     <p>Foi um sacrifício para fazer isso, mas no final eu consegui</p>
 
+
+
+
+
+<!-- ========================================= TEMPERATURA  ================================================= -->
+
+
+
     <h2>Conversor</h2>
 
-    <label for="temperatura">Temperatura:</label>
-    <input type="text" id="temperatura">
-    <br> <br>
-    <label for="atual"> Digite a escala atual, Celsius (c), Fanrenheit (f) e Kelvin (k):</label>
-    <input type="text" id="atual"><br>
-    <br>
-    <label for="conversao">Digite a unidade desejada, Celsius (c), Fahrenheit (f) ou Kelvin (k)</label>
-    <input type="text" id="conversao">
-    <br><br>
-    <button type="button" onclick="calculeConversao(temperatura, atual,conversao)"> Botão de conversão</button>
+    <form action="">
 
- 
+      <label for="temperatura">Temperatura:</label>
+      <input type="text" id="temperatura" />
+      <br>
+      <br>
+      <label for="atual">
+       De: Celsius (c), Fanrenheit (f) e Kelvin (k):</label
+      >
+      <select name="" id="atual">
+        <option value="c" selected>Celsius</option>
+        <option value="f" selected>Farenheit</option>
+        <option value="k" selected>Kelvin</option>
+      </select>
 
 
+      <br><br>
 
+
+      <label for="conversao">
+        Para: Celsius (c), Fanrenheit (f) e Kelvin (k):</label
+      >
+      <select name="" id="conversao ">
+        <option value="c" >Celsius</option>
+        <option value="f" selected>Farenheit</option>
+        <option value="k" >Kelvin</option>
+      </select>
+      
+      <br><br>
+      <button
+        type="button"
+        onclick="calculeConversao(temperatura, atual,conversao)"
+      >
+        Botão de conversão
+      </button>
+
+    </form>
+    <div ></div>
 
     <h2>De onde surgiu o Celsius?</h2>
-    <p>Em 1742, o astrônomo sueco, Anders Celsius sugeriu que se tomasse o zero como ponto de fusão do gelo e 100 como
-        ponto de ebulição da água. Essa escala foi dividida em 100 partes iguais, chamadas de "graus". Essa, chamada
-        ESCALA CELSIUS(oC), é adotada na maioria dos países, inclusive no Brasil.</p>
+    <p>
+      Em 1742, o astrônomo sueco, Anders Celsius sugeriu que se tomasse o zero
+      como ponto de fusão do gelo e 100 como ponto de ebulição da água. Essa
+      escala foi dividida em 100 partes iguais, chamadas de "graus". Essa,
+      chamada ESCALA CELSIUS(oC), é adotada na maioria dos países, inclusive no
+      Brasil.
+    </p>
 
     <h2>De onde surgiu a escala termométrica</h2>
-    <p>A escala Fahrenheit foi criada também no século XVIII pelo engenheiro e físico Daniel Gabriel Fahrenheit,
-        cientista que inventou o termômetro de mercúrio. Essa escala foi criada utilizando como referências a
-        temperatura de uma mistura de gelo e cloreto de amônia (0 °F) e a temperatura normal do corpo humano (100 °F).
+    <p>
+      A escala Fahrenheit foi criada também no século XVIII pelo engenheiro e
+      físico Daniel Gabriel Fahrenheit, cientista que inventou o termômetro de
+      mercúrio. Essa escala foi criada utilizando como referências a temperatura
+      de uma mistura de gelo e cloreto de amônia (0 °F) e a temperatura normal
+      do corpo humano (100 °F).
     </p>
 
     <h2>De onde surgiu a escala termométrica Kelvin</h2>
-    <p>A escala Kelvin foi proposta em 1864 pelo físico e engenheiro irlandês William Thomson, o qual também era
-        conhecido como Lord Kelvin. Ele acreditava que era necessária uma escala termométrica que pudesse atribuir a um
-        material uma total ausência de movimentação de suas partículas, o que ele chamou de zero absoluto.</p>
-</body>
-
+    <p>
+      A escala Kelvin foi proposta em 1864 pelo físico e engenheiro irlandês
+      William Thomson, o qual também era conhecido como Lord Kelvin. Ele
+      acreditava que era necessária uma escala termométrica que pudesse atribuir
+      a um material uma total ausência de movimentação de suas partículas, o que
+      ele chamou de zero absoluto.
+    </p>
+  </body>
 </html>

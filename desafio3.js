@@ -17,7 +17,8 @@ function calculeConversao(temperatura, atual, conversao){
     calculoKelvin1 = temperatura - 273.15,
     calculoKelvin2 = (temperatura * 9) / 5 - 459.67;
   
-  let mensagem
+    let 
+  
   // tudo normal
   
   // if (temperatura != Number){
