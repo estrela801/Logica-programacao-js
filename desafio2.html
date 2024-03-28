@@ -73,25 +73,25 @@
 
 
 
-<!-- ========================================= TEMPERATURA  ================================================= -->
+<!-- ================================================================== TEMPERATURA  =======================================================================================   -->
 
 
-
+<script src="desafio3.js"></script>
     <h2>Conversor</h2>
 
     <form action="">
 
       <label for="temperatura">Temperatura:</label>
-      <input type="text" id="temperatura" />
+      <input type="number" id="temperatura">
       <br>
       <br>
       <label for="atual">
-       De: Celsius (c), Fanrenheit (f) e Kelvin (k):</label
+       De:</label
       >
       <select name="" id="atual">
-        <option value="c" selected>Celsius</option>
-        <option value="f" selected>Farenheit</option>
-        <option value="k" selected>Kelvin</option>
+        <option value="c" selected id="calculoCelsius">Celsius</option>
+        <option value="f" selected id="">Farenheit</option>
+        <option value="k" selected id="">Kelvin</option>
       </select>
 
 
@@ -99,24 +99,39 @@
 
 
       <label for="conversao">
-        Para: Celsius (c), Fanrenheit (f) e Kelvin (k):</label
+        Para:</label
       >
-      <select name="" id="conversao ">
+      <select name="" id="conversao">
         <option value="c" >Celsius</option>
-        <option value="f" selected>Farenheit</option>
+        <option value="f" selected Farenheit>Farenheit</option>
         <option value="k" >Kelvin</option>
       </select>
       
       <br><br>
       <button
         type="button"
-        onclick="calculeConversao(temperatura, atual,conversao)"
+        id="calculeConversao"
       >
         Botão de conversão
       </button>
 
     </form>
-    <div ></div>
+    <div id="resultadoConversao"></div>
+
+    <script>
+      document.querySelector("#calculeConversao").addEventListener("click", function () {
+        const temperatura = document.querySelector('#temperatura').value;
+        const atual = document.querySelector('#atual').value;
+        const conversao =document.querySelector('#conversao').value;
+
+        const valorConvertido = calculoConversao(temperatura, atual, conversao);
+
+        document.querySelector('#resultadoConversao').innerHTML = `valorConvertido:${valorConvertido.temperatura + valorConvertido.conversao}`;
+        
+
+      }); 
+      
+    </script>
 
     <h2>De onde surgiu o Celsius?</h2>
     <p>
@@ -127,7 +142,7 @@
       Brasil.
     </p>
 
-    <h2>De onde surgiu a escala termométrica</h2>
+    <h2>De onde surgiu a escala termométrica Farenheit</h2>
     <p>
       A escala Fahrenheit foi criada também no século XVIII pelo engenheiro e
       físico Daniel Gabriel Fahrenheit, cientista que inventou o termômetro de
