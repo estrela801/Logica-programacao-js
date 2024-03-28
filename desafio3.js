@@ -1,4 +1,4 @@
-function calculoConversao(temperatura, atual, conversao){
+function calculoTemp(temperatura, atual, conversao){
 
 
   // const temperatura = parseFloat(window.prompt("Digite a temperatura")),
@@ -66,7 +66,7 @@ function calculoConversao(temperatura, atual, conversao){
       temperatura:temperatura,
       atual:atual,
       conversao:conversao
-    }
+  }
 }
 
 
