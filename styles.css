@@ -1,0 +1,25 @@
+:root{
+    --color: white; 
+    --background-color:rgb(46, 0, 250);
+    --font-size: 10px;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--color);
+}
+header{
+   
+    top:0px;
+    background-color: cadetblue;
+}
+nav{
+     display: flex;
+     text-align: center;
+    justify-content: center;
+}
+
+div a{
+    color: var(--color);
+    
+    
+}
