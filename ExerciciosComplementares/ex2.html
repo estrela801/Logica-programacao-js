@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lojas do seu Zé (exercício 2)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: antiquewhite;
+            font-family: "Anta" sans-serif;
+        }
+
+        header {
+            margin: 0 0 100px 0;
+            font-size: 18px;
+        }
+
+        section {
+            display: flex;
+        }
+
+        section p {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            width: 150px;
+            float: left;
+            margin: 10px 20px;
+        }
+
+        form {
+            margin: 0 0 60px 0;
+        }
+
+        div {
+            font-size: px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <h1>Lojas do seu Zé</h1>
+            <p>Vendemos frutas da melhor qualidade do planeta!</p>
+            <p>Compre e saboreie as melhores frutas que encontrará na Via Lactea!!</p>
+        </header>
+
+        <section>
+            <img src="https://imgs.search.brave.com/P0uMX7wGFbzXfMk-nyVv-Q1q_ACzJmm9r_6oCJM9g2A/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oNy5h/bGFteS5jb20vY29t/cGVzLzJhaDIxM2sv/dW5hLWNlc3RhLWRl/LW1pbWJyZS1sbGVu/YS1kZS1iYW5hbmFz/LTJhaDIxM2suanBn"
+                alt="cesta-de-bananas">
+            <p>Cachos de banana por R$4,00</p>
+            <img src="https://imgs.search.brave.com/kXynkjKaM5NPDpOY2ggTzNpxUV1JZa_VVBL27E6OY4M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jb250/ZXVkby5pbWd1b2wu/Y29tLmJyL2MvZW50/cmV0ZW5pbWVudG8v/ZTAvMjAxOC8xMC8y/Ni9sYXJhbmphLTEt/MTU0MDU4ODM1NTYz/Nl92Ml83NTB4NDIx/LmpwZw"
+                alt="cesta-de-laranjas">
+            <p> Laranjas por R$1,00 a unidade</p>
+            <p><img src="https://imgs.search.brave.com/y4MdgnLA5KyONnavLv8K9_XAMWLwqFMDXKZd-KhNaoM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/OS8xMy8xMC8zMC9h/cHBsZXMtNTU2Nzg4/NF82NDAuanBn"
+                    alt="cesta-de-maçãs"> Maçãs por R$1,00 a unidade</p>
+        </section>
+        <form action="">
+            <label for="bananas">Cachos de banana por kg</label>
+            <input type="text" id="bananas">
+            <label for="laranjas">Unidades de laranjas</label>
+            <input type="text" id="laranjas">
+            <label for="mac as">Unidades de maçãs</label>
+            <input type="text" id="macas">
+        </form>
+        <div>
+            <h2>Descontos</h2>
+            <form action="">
+                <label for="funcionario">Funcionário</label>
+                <input type="radio" id="funcionario" name="opcao">
+                <label for="clienteVp">Cliente Vip</label>
+                <input type="radio" id="clienteVp" name="opcao">
+                <label for="cliente">Cliente</label>
+                <input type="radio" id="cliente" name="opcao">
+            </form>
+            <button type="button" id="btValor">Valor da compra</button>
+            <div id="valorFinal"></div>
+        </div>
+
+    </main>
 </body>
+<script src="ex2.js"></script>
+<script>
+    document.querySelector('#btValor').addEventListener('click', function () {
+        const funcionario = document.querySelector('#funcionario');
+        const clienteVp = document.querySelector('#clienteVp');
+        const cliente = document.querySelector('#cliente');
+        const banana = document.querySelector('#banana') * 4;
+        const laranja = document.querySelector('#laranja') * 5;
+        const maca = document.querySelector('#maca') * 3;
+
+        let resultado = valorCompra(funcionario, clienteVp, cliente, bananas, laranjas, macas);
+
+        document.querySelector('#valorFinal').innerHTML = resultado;
+    })
+
+
+</script>
+
 </html>
