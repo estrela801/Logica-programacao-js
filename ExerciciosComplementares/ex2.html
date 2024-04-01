@@ -50,6 +50,10 @@
             <p>Vendemos frutas da melhor qualidade do planeta!</p>
             <p>Compre e saboreie as melhores frutas que encontrará na Via Lactea!!</p>
         </header>
+  
+
+        <!-- --------------------------------------------------------IMAGENS------------------------------------------------------ -->
+
 
         <section>
             <img src="https://imgs.search.brave.com/P0uMX7wGFbzXfMk-nyVv-Q1q_ACzJmm9r_6oCJM9g2A/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oNy5h/bGFteS5jb20vY29t/cGVzLzJhaDIxM2sv/dW5hLWNlc3RhLWRl/LW1pbWJyZS1sbGVu/YS1kZS1iYW5hbmFz/LTJhaDIxM2suanBn"
@@ -61,14 +65,23 @@
             <p><img src="https://imgs.search.brave.com/y4MdgnLA5KyONnavLv8K9_XAMWLwqFMDXKZd-KhNaoM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMC8w/OS8xMy8xMC8zMC9h/cHBsZXMtNTU2Nzg4/NF82NDAuanBn"
                     alt="cesta-de-maçãs"> Maçãs por R$1,00 a unidade</p>
         </section>
+
+<!--------------------------------------------------------FRUTAS------------------------------------------------ -->
+
+
         <form action="">
             <label for="bananas">Cachos de banana por kg</label>
             <input type="text" id="bananas">
-            <label for="laranjas">Unidades de laranjas</label>
-            <input type="text" id="laranjas">
+                <label for="laranjas">Unidades de laranjas</label>
+                <input type="text" id="laranjas">
             <label for="mac as">Unidades de maçãs</label>
             <input type="text" id="macas">
         </form>
+
+
+        <!-- ================================================DESCONTOS================================================= -->
+
+
         <div>
             <h2>Descontos</h2>
             <form action="">
@@ -95,7 +108,7 @@
         const laranja = document.querySelector('#laranja') * 5;
         const maca = document.querySelector('#maca') * 3;
 
-        let resultado = valorCompra(funcionario, clienteVp, cliente, bananas, laranjas, macas);
+        let resultado = Desconto(funcionario, clienteVp, cliente);
 
         document.querySelector('#valorFinal').innerHTML = resultado;
     })

@@ -1,18 +1,22 @@
 const funcionario = document.querySelector('#funcionario');
 const clienteVp = document.querySelector('#clienteVp');
 const cliente = document.querySelector('#cliente');
-const banana = document.querySelector('#banana') * 4;
-const laranja = document.querySelector('#laranja') * 5;
-const maca = document.querySelector('#maca') * 3;
+const banana = document.querySelector('#banana');
+const laranja = document.querySelector('#laranja');
+const maca = document.querySelector('#maca');
 
-let resultado 
-function valorCompra (funcionario, clienteVp, cliente, bananas, laranjas, macas){
-       if (funcionario){
-         resultado = 10%(banana + laranja + maca);
-         if (clienteVp){
-            resultado = 5%(banana + laranja + maca);
-         } else{
-            mensagem = banana + laranja + maca;
-         }
-       }
+const valor = banana + laranja + maca;
+console.log(valor)
+
+let mensagem
+function Desconto (funcionario, clienteVp, cliente){
+   if (funcionario){
+      mensagem = valor * 10 /100
+      console.log(valor)
+   } else if (clienteVp){
+      mensagem = valor * 5 /100
+   } else {
+      mensagem = valor
+   }
+       
 }
