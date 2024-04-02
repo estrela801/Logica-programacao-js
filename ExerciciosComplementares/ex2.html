@@ -74,7 +74,7 @@
             <input type="text" id="bananas">
                 <label for="laranjas">Unidades de laranjas</label>
                 <input type="text" id="laranjas">
-            <label for="mac as">Unidades de maçãs</label>
+            <label for="macas">Unidades de maçãs</label>
             <input type="text" id="macas">
         </form>
 
@@ -87,8 +87,10 @@
             <form action="">
                 <label for="funcionario">Funcionário</label>
                 <input type="radio" id="funcionario" name="opcao">
+
                 <label for="clienteVp">Cliente Vip</label>
                 <input type="radio" id="clienteVp" name="opcao">
+                
                 <label for="cliente">Cliente</label>
                 <input type="radio" id="cliente" name="opcao">
             </form>
@@ -104,16 +106,14 @@
         const funcionario = document.querySelector('#funcionario');
         const clienteVp = document.querySelector('#clienteVp');
         const cliente = document.querySelector('#cliente');
-        const banana = document.querySelector('#banana') * 4;
-        const laranja = document.querySelector('#laranja') * 5;
-        const maca = document.querySelector('#maca') * 3;
+        const banana = parseFloat(document.querySelector('#banana'));
+        const laranja = parseFloat(document.querySelector('#laranja'));
+        const maca = parseFloat(document.querySelector('#maca'));
 
         let resultado = Desconto(funcionario, clienteVp, cliente);
 
         document.querySelector('#valorFinal').innerHTML = resultado;
     })
-
-
 </script>
 
 </html>

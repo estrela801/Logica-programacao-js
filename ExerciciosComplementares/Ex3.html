@@ -11,18 +11,23 @@
         <h1>Desafio 3</h1>
         <p>Nesta página há um programa que calcula mostra o resultado de jogos de futebol </p>
     </header>
+
+
+    <!-- ----------------------------------VALORES-------------------------------------------------------- -->
+
+
     <form action="">
         <label for="time1">Digite o nome do primeiro time</label>
-        <input type="text" name="time" id="time1"><br>
+        <input type="text"  id="time1"><br>
 
-        <label for="" id="time2">Digite o nome do segundo time</label>
-        <input type="text" name="time" id="time2"><br>
+        <label for="time2">Digite o nome do segundo time</label>
+        <input type="text" id="time2"><br>
 
-        <label for="resultadoTime1">Digite a quantidade de gols feitos pelo time 1</label>
-        <input type="text" name="gols1" id="resultadoTime1"><br>
+        <label for="gols1">Digite a quantidade de gols feitos pelo time 1</label>
+        <input type="number"  id="gols1"><br>
         
-        <label for="resultadoTime2">Digite quantidade de gols feitos pelo time 2</label>
-        <input type="text" name="gols2" id="resultadoTime2"><br>
+        <label for="gols2">Digite quantidade de gols feitos pelo time 2</label>
+        <input type="number" id="gols2"><br>
 
         <button type="button" id="btResultado">Resultado da partida</button>
 
@@ -34,15 +39,15 @@
     document.querySelector('#btResultado').addEventListener('click', () => {
         const time1 = document.querySelector('#time1')
         const time2 = document.querySelector('#time2')
-        const gols1 = document.querySelector('#gols1')
-        const gols2 = document.querySelector('#gols2')
+        const gols1 = document.querySelector('#gols1').value
+        const gols2 = document.querySelector('#gols2').value
         console.log(resultadoPartida(time1,time2,gols1,gols2))
 
-        const final = resultadoPartida  (time1, time2, gols1, gols2)
+        const final = resultadoPartida(time1, time2, gols1, gols2)
         
         document.querySelector('#resultadoFinal').innerHTML = final
 
-        })
+    })
 
 </script>
 </html>

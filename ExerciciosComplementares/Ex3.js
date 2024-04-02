@@ -1,14 +1,18 @@
-//## 3. Jogo de Futebol
+let mensagem
 
-// Desenvolva um programa que receba do usuário o placar de um jogo de futebol (os gols de cada time), e informa se o resultado foi empate, vitória do primeiro time ou vitória do segundo time
+function resultadoPartida(time1, time2, gols1,gols2){
+        if(gols1 > gols2){
+                mensagem = `O time ${time1} 1 está vencendo`
+                console.log(mensagem)
+        } 
+        else if (gols2 > gols1){
+                mensagem = `O time ${time2}  2 está vencendo`
+        } else {
+                mensagem = 'O jogo está empatado'
+        }
+        return mensagem
+                
 
-        const time1 = document.querySelector('#time1')
-        const time2 = document.querySelector('#time2')
-        const gols1 = document.querySelector('#gols1')
-        const gols2 = document.querySelector('#gols2')
-
-
-
-function resultadoPartida  (time1, time2, gols1, gols2){
+       
         
-}
+}console.log(mensagem)
