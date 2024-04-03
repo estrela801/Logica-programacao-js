@@ -5,47 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício complementar 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --font-size: 10px;
-        }
-       body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: "Anta", sans-serif;
-       }
-        body{
-            background-color: rgb(156, 255, 255);
-            line-height: 2.2rem;
-            font-weight: 700;
-        }
-        h1{
-            font-size: 4rem;
-            line-height: 3rem;
-            margin: 10px ;
-        }
-        h2{
-            font-size: 2rem;
-            margin: 20px 0;
-        }
-        p{
-            font-size: 1.2rem;
-            
-        }
-        button{
-            background-color: #fcff67;
-            color: rgb(0, 0, 0);
-            transition: .8s;
-            cursor: pointer;
-        }
-        button:hover{
-            background-color: rgb(255, 251, 0);
-            font-size: 1.2rem;
-        }
-
-    </style>
+    <link rel="stylesheet" href="estilotriangulo.css">
+    
 </head>
 <body>
     <h1>Exercício complamentar 1</h1>
@@ -57,20 +18,30 @@
 
 
     <form action="">
-        <label for="lado1">Por favor, informe o tamanho do primeiro lado</label>
-        <input type="number" id="lado1"> <br>
-        <label for="lado2" >Por favor, informe o tamanho do segundo lado</label>
-        <input type="number" id="lado2"> <br>
-        <label for="lado3" >Por favor, informe o tamanho do terceiro lado</label>
-        <input type="number" id="lado3">
+        <section id="estilo">
+        <div class="center">
+            <label for="lado1">Lado1</label>
+            <input type="number" id="lado1"> <br>
+        </div>
+        <div class="center">
+            <label for="lado2">Lado2</label>
+            <input type="number" id="lado2"> <br>
+        </div>
+        <div class="center">
+            <label for="lado3" >Lado3</label>
+            <input type="number" id="lado3">
+        </div>
+        <button type="button" id="tipoTriangulo">Descubra o tipo de triângulo</button>
+
+    <button type="reset" id="limpaTriangulo">Limpar</button> 
+        <p id="resultado"></p>
     </form>
 
+</section>
 
+    
 
-    <button type="button" id="tipoTriangulo">Descubra o tipo de triângulo</button>
-    <button type="reset" id="limpaTriangulo">Limpar</button>
-
-    <p id="resultado"></p>
+   
 </body>
 <script src="Ex1.js"></script>
 <script>
