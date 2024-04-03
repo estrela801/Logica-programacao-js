@@ -20,7 +20,7 @@ body{
     margin-left: 25%;
     border-radius: 10px;
     box-shadow:     3px 5px 2px rgb(221, 0, 255);
-    height: 400px;
+    height: 450px;
     
 }
 .center{
@@ -38,11 +38,22 @@ button{
     margin: 10px 80px;
 }
 #tipoTriangulo{
-    background-color: blue;
+    background-color: rgb(47, 0, 255);
     color: white;
+    height: 100px;
 }
 #limpaTriangulo{
-    background-color: red;
+    background-color: rgb(245, 67, 67);
     color: white;
 }
+#resultado{
+    width: 300px;
+    font-size: 20px;
+    font-weight: bolder;
+}
 
+@media (max-width:450px){
+body{
+    background-color:blue;
+}
+}
