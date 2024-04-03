@@ -23,9 +23,6 @@ body{
     height: 400px;
     
 }
-label,input {
-    /* margin-left: 0px; */
-}
 .center{
     width: 150px;
     margin: 10px 0 0 0;
@@ -48,6 +45,4 @@ button{
     background-color: red;
     color: white;
 }
-#resultado{
-    display: block  ;
-}
+
