@@ -11,17 +11,28 @@
 
 
 
-let resultado
+let resultado,erro, mensagem 
 
+erro = 'Algo deu errado, por favor verifique as informações'
 
 
     function tipoTriangulo(lado1, lado2, lado3) {
-        if (lado1 === lado2 && lado2 === lado3) {
-            return "Equilátero";
+   
+        
+        
+    if(lado1, lado2, lado3 === null){
+
+    mensagem = 'Por favor digite um número'
+
+        
+    }if (lado1 === lado2 && lado2 === lado3) {
+            resultado = "Equilátero";
         } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-            return "Isósceles";
-        } else {
-            return "Escaleno";
-        }
+            resultado =  "Isósceles";
+        } else if ((lado1 != lado2) && (lado2 != lado3) && (lado3 != lado1)) {
+            resultado = "Escaleno" 
+        }else{
+         erro = 'Algo deu errado, por favor verifique as informações'
     }
 
+}
