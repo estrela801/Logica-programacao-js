@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 4</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Exercício 4</h1>
-    <p> Nesta página farei um programa que armazena nomes e busca por outros</p>
-    
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Exercício 4</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<h1>Exercício 4</h1>
+		<p>Nesta página farei um programa que armazena nomes e busca por outros</p>
+		<form action="">
+			<label for="name">Digite os nomes sem usar virgula</label>
+			<input type="text" id="name" />
+			<button type="button" id="btBuscaNome"></button>
+		</form>
+	</body>
+	<script src="Ex4.js"></script>
+	<script>
+		document
+			.querySelector("#btBuscaNome")
+			.addEventListener("click", function () {
+				const name = document.querySelector("#name");
 
-</body>
-<script src="Ex4.js"></script>
+				let resultado = buscaNome(name);
+			});
+	</script>
 </html>
