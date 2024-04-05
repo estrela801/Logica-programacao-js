@@ -10,19 +10,45 @@
 		<h1>Exercício 4</h1>
 		<p>Nesta página farei um programa que armazena nomes e busca por outros</p>
 		<form action="">
-			<label for="name">Digite os nomes sem usar virgula</label>
-			<input type="text" id="name" />
-			<button type="button" id="btBuscaNome"></button>
+			<label for="name">Digite 10 nomes sem usar virgula</label>
+			<input type="text" id="name">
+			<button type="button" id="btArmazenaNome">Armazenar nomes</button>
+
+			<p id="resultadoArmazena"></p>
+		</form>
+
+		<!-- --------------Verificação -------------------------- -->
+
+		<h2>Verificação de nomes</h2>
+
+		<p>Verifique se um nome especifíco foi armazenado</p>
+
+		<form action="">
+			<label for="VerificaNome">Nome</label>
+			<input type="text" id="VerificaNome" />
+			<button type="button" id="btVerifica">Verificar nome</button>
+
+			<p id="p.Verifica"></p>
 		</form>
 	</body>
 	<script src="Ex4.js"></script>
 	<script>
 		document
-			.querySelector("#btBuscaNome")
+			.querySelector("#btArmazenaNome")
 			.addEventListener("click", function () {
 				const name = document.querySelector("#name");
 
-				let resultado = buscaNome(name);
+				document.querySelector("#resultadoArmazena").innerHTML = "tudo certo!";
+			});
+
+		//  ------------- Verificação -----------
+
+		document
+			.querySelector("#btVerifica")
+			.addEventListener("click", function () {
+				const resultadoVerifica = verificacaoNome();
+
+            document.querySelector('p.Verifica').innerHTML = resultadoVerifica
 			});
 	</script>
 </html>
