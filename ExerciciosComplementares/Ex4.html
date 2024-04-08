@@ -4,20 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Exercício 4</title>
-		<link rel="stylesheet" href="styles.css" />
+		<!-- <link rel="stylesheet" href="styles.css" /> -->
 	</head>
 	<body>
 		<h1>Exercício 4</h1>
 		<p>Nesta página farei um programa que armazena nomes e busca por outros</p>
 		<form action="">
-			<label for="name">Digite 10 nomes sem usar virgula</label>
-			<input type="text" id="name">
-			<button type="button" id="btArmazenaNome">Armazenar nomes</button>
+			<label for="recebeNome">Digite 10 nomes sem usar virgula</label>
+			<input type="text" id="recebeNome" required autofocus>
+			<button type="reset" id="btArmazenaNome">Armazenar nomes</button>
+			<button type="button" id="btMostrar">Mostrar	</button>
 
 			<p id="resultadoArmazena"></p>
 		</form>
-
-		<!-- --------------Verificação -------------------------- -->
+<!-- 
+		--------------Verificação --------------------------
 
 		<h2>Verificação de nomes</h2>
 
@@ -29,26 +30,41 @@
 			<button type="button" id="btVerifica">Verificar nome</button>
 
 			<p id="p.Verifica"></p>
-		</form>
+		</form> -->
 	</body>
 	<script src="Ex4.js"></script>
 	<script>
-		document
-			.querySelector("#btArmazenaNome")
-			.addEventListener("click", function () {
-				const name = document.querySelector("#name");
 
-				document.querySelector("#resultadoArmazena").innerHTML = "tudo certo!";
+			
+			let nomes = [];
+
+		document.querySelector("#btArmazenaNome").addEventListener("click", () => 
+			{
+			
+				
+
+				if (nomes.length < 10){
+					nomes.push(document.querySelector('#recebeNome').value);
+				}else {
+					if (nomes.includes(document.querySelector('#recebeNome').value)){
+						console.log('ACHEI')
+					}else {
+						console.log('NÃo ACHEI')
+					}
+				}
+				
 			});
 
-		//  ------------- Verificação -----------
+			document.querySelector('#btMostrar').addEventListener('click', () => {
 
-		document
-			.querySelector("#btVerifica")
-			.addEventListener("click", function () {
-				const resultadoVerifica = verificacaoNome();
+			nomes.forEach((nome) => {
+				document.querySelector('#resultadoArmazena').innerHTML += (nome + '<br>');
+			})
+			})
 
-            document.querySelector('p.Verifica').innerHTML = resultadoVerifica
-			});
+			//TODO:
+			
+			// 3. Após o decimo nome, o campo permite buscar um nome no array.
+			// 4. Exibir se o nome foi encontrado. 
 	</script>
 </html>
