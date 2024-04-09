@@ -24,9 +24,7 @@ nav{
     background-color: rgb(102, 255, 255);
     width: inherit;
 }
-section{
 
-}
 h1{
     font-size: 3.5rem;
     line-height: 3rem;
@@ -47,10 +45,10 @@ button{
     transition: .8s;
     cursor: pointer;
 }
-button:hover{
+/* button:hover{
     background-color: rgb(255, 251, 0);
     font-size: 1.2rem;
-}
+} */
 a{
     margin-left: 30px;
 }

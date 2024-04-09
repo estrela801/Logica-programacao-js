@@ -4,7 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Exercício 4</title>
-		<!-- <link rel="stylesheet" href="styles.css" /> -->
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			.oculto{
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Exercício 4</h1>
@@ -12,55 +18,69 @@
 		<form action="">
 			<label for="recebeNome">Digite 10 nomes sem usar virgula</label>
 			<input type="text" id="recebeNome" required autofocus>
+
 			<button type="reset" id="btArmazenaNome">Armazenar nomes</button>
-			<button type="button" id="btMostrar">Mostrar	</button>
+		
+			<button type="button" id="btMostrar" class="oculto">pesquisar	</button>
+				
+			
 
 			<p id="resultadoArmazena"></p>
 		</form>
-<!-- 
-		--------------Verificação --------------------------
 
-		<h2>Verificação de nomes</h2>
-
-		<p>Verifique se um nome especifíco foi armazenado</p>
-
-		<form action="">
-			<label for="VerificaNome">Nome</label>
-			<input type="text" id="VerificaNome" />
-			<button type="button" id="btVerifica">Verificar nome</button>
-
-			<p id="p.Verifica"></p>
-		</form> -->
 	</body>
-	<script src="Ex4.js"></script>
-	<script>
+	
+	<script>	
+	
+	let nomes = [];//array vazio
+	
+	
+	
+	
+		document.addEventListener('keydown', (evento) => {
+
+			if (evento.key === 'enter'){
+				evento.preventDefault()
+				if (nomes.length < 4){
+					document.querySelector('#btArmazenaNome').click();
+				}else{
+					document.querySelector('#btMostrar').click();
+				}
+			}
+
+
+		})
+
+
 
 			
-			let nomes = [];
+		
 
-		document.querySelector("#btArmazenaNome").addEventListener("click", () => 
+		document.querySelector("#btArmazenaNome").addEventListener("click", () => //botão para armazenar os nomes e o evento de escuta
 			{
 			
-				
+				nomes.push(document.querySelector('#recebeNome').value);//colocar o valor do input dentro do array
 
-				if (nomes.length < 10){
-					nomes.push(document.querySelector('#recebeNome').value);
-				}else {
-					if (nomes.includes(document.querySelector('#recebeNome').value)){
-						console.log('ACHEI')
-					}else {
-						console.log('NÃo ACHEI')
-					}
+				if (nomes.length === 4){//length faz o js olhar tudo que está dentro do array
+					
+					document.querySelector('label[for="recebeNome"]').innerHTML = 'Nome para pesquisar'//quando atingir a quantidade de nomes, trocar o valor do label
+					document.querySelector('#btArmazenaNome').classList.add('oculto')//dentro do css tem uma estilização de display:none para a classe "oculta", estes códigos colocam e tiram está classe dos elementos
+					document.querySelector('#btMostrar').classList.remove('oculto');
+					
 				}
 				
 			});
 
-			document.querySelector('#btMostrar').addEventListener('click', () => {
+			document.querySelector('#btMostrar').addEventListener('click', () => {// ao clicar no botão "mostrar" executar 
+				const nomePesquisado = document.querySelector('#recebeNome').value;// cria uma variavel para
+				if(nomes.includes(nomePesquisado)){
+					document.querySelector('#resultadoArmazena').innerHTML = `ACHEI na posição:${nomes.indexOf(nomePesquisado)} o nome:${nomePesquisado}`
+				}else{
+					document.querySelector('#resultadoArmazena').innerHTML = `NÃO ACHEI ${nomePesquisado}`
+				}
+				})
 
-			nomes.forEach((nome) => {
-				document.querySelector('#resultadoArmazena').innerHTML += (nome + '<br>');
-			})
-			})
+			
 
 			//TODO:
 			
