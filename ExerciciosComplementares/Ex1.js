@@ -20,9 +20,9 @@ erro = 'Algo deu errado, por favor verifique as informações'
    
         
         
-    if(lado1, lado2, lado3 === null){
+     if(lado1, lado2, lado3 === null){
 
-    mensagem = 'Por favor digite um número'
+     mensagem = 'Por favor digite um número'
 
         
     }if (lado1 === lado2 && lado2 === lado3) {

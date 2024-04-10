@@ -8,6 +8,64 @@ body{
     padding: 30px;
 
 }
+main{
+    background-color: rgb(0, 255, 255);
+    width: 700px;
+    height: 130px;
+    margin: 30px auto;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 2px black;
+    padding: 40px;
+
+}
+.container-input{
+    display: flex;
+    gap: 10px;
+}
+input{
+    border-radius: 8px;
+    background-color: rgb(127, 168, 255);
+    padding-left: 8px;
+    outline: blue;
+}
+button{
+    margin: 30px 100px;
+    width: 170px;
+    height: 40px;
+    color: white;
+    border-radius: 8px;
+}
+button:active{
+    box-shadow: inset 1px 1px 1px ;
+}
+.container-butao{
+    display: flex;
+}
+#tipoTriangulo{
+    background-color: rgb(61, 93, 255);
+}
+#tipoTriangulo:hover{
+    background-color: rgb(0, 37, 220);
+}
+#limpaTriangulo{
+    background-color: rgb(215, 29, 29);
+}
+#limpaTriangulo:hover{
+    background-color: rgb(174, 3, 3);
+}
+#resultado{
+    border: 2px solid black;
+    border-radius: 10px;
+    height:30px;
+        font-size: 18px;
+    padding-top: 9px;
+}
+
+
+
+
+
+
 /* TODO
 1 Criar uma caixa para envolver os inputs botões e reseultado
 2 Dar cor, sombra e tamanho pra tudo 
