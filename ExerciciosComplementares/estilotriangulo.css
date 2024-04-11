@@ -11,7 +11,7 @@ body{
 main{
     background-color: rgb(0, 255, 255);
     width: 700px;
-    height: 130px;
+    height: 180px;
     margin: 30px auto;
     border: 2px solid grey;
     box-shadow: 2px 2px 2px black;
@@ -46,6 +46,8 @@ button:active{
 }
 #tipoTriangulo:hover{
     background-color: rgb(0, 37, 220);
+  
+  
 }
 #limpaTriangulo{
     background-color: rgb(215, 29, 29);

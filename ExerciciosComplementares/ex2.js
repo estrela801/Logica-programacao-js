@@ -1,9 +1,9 @@
-const funcionario = document.querySelector('#funcionario');
-const clienteVp = document.querySelector('#clienteVp');
-const cliente = document.querySelector('#cliente');
-const banana = document.querySelector('#banana');
-const laranja = document.querySelector('#laranja');
-const maca = document.querySelector('#maca');
+// const funcionario = document.querySelector('#funcionario');
+// const clienteVp = document.querySelector('#clienteVp');
+// const cliente = document.querySelector('#cliente');
+// const banana = document.querySelector('#banana');
+// const laranja = document.querySelector('#laranja');
+// const maca = document.querySelector('#maca');
       
 const valor = banana + laranja + maca;
 console.log(valor)
@@ -11,7 +11,7 @@ console.log(valor)
 let mensagem
 
 
-function Desconto (funcionario, clienteVp, cliente){
+function Desconto ( cliente, funcionario, clienteVp){
 
    if (funcionario){
       mensagem = valor * 10 /100
