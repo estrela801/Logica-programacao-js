@@ -11,7 +11,7 @@ console.log(valor)
 let mensagem
 
 
-function Desconto ( cliente, funcionario, clienteVp){
+function Desconto(tipoFuncionario, banana, laranja, maca){
 
    if (funcionario){
       mensagem = valor * 10 /100
