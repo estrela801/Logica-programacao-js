@@ -5,18 +5,19 @@
 // const laranja = document.querySelector('#laranja');
 // const maca = document.querySelector('#maca');
       
+
+
+function Desconto(tipoFuncionario, banana, laranja, maca){
+
 const valor = banana + laranja + maca;
 console.log(valor)
 
 let mensagem
 
-
-function Desconto(tipoFuncionario, banana, laranja, maca){
-
-   if (funcionario){
+   if (tipoFuncionario === 'funcionario'){
       mensagem = valor * 10 /100
       console.log(valor)
-   } else if (clienteVp){
+   } else if (tipoFuncionario === 'vip'){
       mensagem = valor * 5 /100
    } else {
       mensagem = valor

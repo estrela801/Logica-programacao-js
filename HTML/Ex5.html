@@ -13,7 +13,71 @@
     <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
-    
+  <h1>Posto de gasolina</h1>
+  <table>
+  
+  </table>
+    <form action="">
+      <label for="gasolina">Quantos litros de gasolina:</label>
+      <input type="text" id="gasolina">
+<br>
+      <label for="alcool">Quantidade de litros de alcool:</label>
+      <input type="text" id="alcool">
+
+      <div class="container-butao">
+        <button type="button" id="calcular">Calcular</button>
+        <button type="button" id="limpar">Limpar</button>
+      </div>
+
+      <p id="resultado"></p>
+    </form>
 </body>
-<script src="Ex5.js"></script>
+<script>
+
+        document.querySelector('#calcular').addEventListener('click', () => {
+        const gasolina = parseFloat( document.querySelector('#gasolina').value );
+        const alcool = parseFloat( document.querySelector('#alcool').value )
+
+
+        const  valor = Desconto(gasolina, alcool)
+      
+       document.querySelector('#resultado').innerHTML = valor
+ })
+
+
+         function Desconto(gasolina, alcool){
+        
+        let msg
+
+         if(alcool > 20){
+
+               msg = alcool  - (alcool * (3/ 100 ))
+
+         }  else if(alcool <= 20){
+
+               msg = alcool  - (alcool *(5 / 100 ))
+
+         }  else if (gasolina >= 20 ){
+
+               msg = gasolina   - (gasolina * (4/ 100 ) )
+
+         } else if(gasolina < 20){
+
+               msg = gasolina -( gasolina *( 6/ 100))
+
+         }
+return msg
+
+        }
+        
+
+
+    document.querySelector('#limpar').addEventListener('click', () => {
+
+        document.querySelector('#resultado').innerHTML = ''
+
+    })
+
+
+</script>
 </html>
