@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="../Styles/styles.css">
   </head>
 
-  <body>
-    <main>
-      <header>
+  <body> 
+     <header>
         <h1>Lojas do seu Zé</h1>
         <p>Vendemos frutas da melhor qualidade do planeta!</p>
         <p>
           Compre e saboreie as melhores frutas que encontrará na Via Lactea!!
         </p>
       </header>
+    <main>
+    
 
     <table>
       <tr>
@@ -47,12 +48,37 @@
     </table>
 
       <form action="">
+
         <label for="bananas">Cachos de banana por kg</label>
         <input type="number" id="bananas"  min="1" step="1"/>
         <label for="laranjas">Unidades de laranjas</label>
         <input type="number" id="laranjas"  min="1" step="1"/>
         <label for="macas">Unidades de maçãs</label>
         <input type="number" id="macas" min="1" step="1"/>
+
+        <div class="container-input">
+          <label for="bananas">Cachos de banana por kg</label>
+          <input type="text" id="bananas" />
+          <label for="laranjas">Unidades de laranjas</label>
+          <input type="text" id="laranjas" />
+          <label for="macas">Unidades de maçãs</label>
+          <input type="text" id="macas" />
+        </div>
+
+
+       <label for="tipoDesconto">Tipo de desconto</label>
+         
+          <select name="" id="tipoDesconto">
+            <option value="funcionario">Funcionario</option>
+            <option value="clienteVp">Vip</option>
+            <option value="cliente">Cliente</option>
+        </select>
+       
+        <button type="button" id="btValor">Valor da compra</button>
+
+        <div id="valorFinal"></div>
+         
+>>>>>>> 7dedac3c95ccb92a8b560af331f487d90def0bc8
       </form>
 
 
