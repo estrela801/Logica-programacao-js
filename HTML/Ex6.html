@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../Styles/styles.css" />
   </head>
   <body>
-    <p>Vendo notbook no valor de R$3,000</p>
+    <h1>Vendo notbook no valor de R$3,000</h1>
     <table>
       <tr>
         <td>Produtos</td>
@@ -33,50 +33,79 @@
       </tr>
     </table>
     <form action="">
-      <label for="produtos">Digite quantas unidades</label>
+      <label for="sla">Digite quantas unidades</label>
       <input
         type="number"
-        id="produtos"
+        id="sla"
         min="0"
         step="1"
         placeholder="Digite quantos unidades"
       />
+<div class="container-butao">
+  
+        <button type="button" id="desconto">Calcular desconto</button>
+        <button id="limpa" type="button">Limpar</button>
+</div>
 
-      <button type="button" id="desconto">Calcular desconto</button>
       <p id="resultado"></p>
     </form>
   </body>
   <script>
 
+   
 
-    let produtos = document.querySelector('#produtos').value;
-         document.querySelector('#desconto').addEventListener('click', (produtos) => {
+         document.querySelector('#desconto').addEventListener('click', function  () {
+
+  // document.querySelector('#resultado').innerHTML = 'rodrigo'
+
+        
+          const quantidade = parseFloat(document.querySelector('#sla').value);
+          const valor = quantidade * 3000
           let msg
-          let sla = {}
-          
+    
 
-          let valor = produtos * 3000
+      if(!isNaN(quantidade)){
 
-         
-           if (produtos >= 3 && produtos <= 5) {
-              
-               msg = valor * 0.02
-              
-           } else if(produtos >= 10 || produtos === 6){
-            msg = valor * 0.03
-           } else if(produtos > 10){
-            msg = valor * 0.05
+     
+           if (quantidade >= 3 && quantidade <= 5) { 
+               msg = valor - (valor * 0.02)
+           } else if(quantidade <= 10 && quantidade >= 6){
+               msg = valor - (valor * 0.03)
+           } else if(quantidade > 10){
+               msg = valor -  (valor * 0.05)
            } else{
-            msg = valor
+              msg = valor
            }
-              return msg
-              
-              
-
+             const valorComDesconto = msg
               document.querySelector('#resultado').innerHTML = msg
-         })
+
+ }  else{
+  
+  document.querySelector('#resultado').innerHTML = 'Por favor, digite um número!'
+ }
+             
+  })
          
-console.log(msg);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.querySelector('#limpa').addEventListener('click', () => {
+      document.querySelector('#resultado').innerHTML = ''
+    })
+    
 
   </script>
 </html>
