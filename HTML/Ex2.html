@@ -1,1 +1,66 @@
-<!-- desisto -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/estilotriangulo.css" />
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <h1>Ingresso para o jogo dos Lakers</h1>
+    <p>Valor do ingresso = R$ 50</p>
+
+    <table>
+      <tr>
+        <td columnspan="2">Descontos</td>
+      </tr>
+      <tr>
+        <td>Funcionario</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Cliente Vip</td>
+        <td>5%</td>
+      </tr>
+      
+    </table>
+
+    <form action="">
+        <div class="container-input">
+            <label for="ingresso">Quantidade de ingressos:</label>
+            <input type="number" id="ingresso">
+            <label for="tipoDesconto">Diga-me quem você é:</label>
+            <select id="tipoDesconto">
+                <option value="funcionario">Funcionario</option>
+                <option value="clienteVip">Cliente Vip</option>
+                <option value="clienteNormal">Cliente comum</option>
+            </select>
+        </div>
+
+        <button id="btCalc" type="button">Valor do ingresso</button>
+        <p id="valorFinal"></p>
+    </form>
+</body>
+<script>
+    document.querySelector('#btCalc').addEventListener('click', function(){
+         const quantiaIngressos = document.querySelector('#ingresso').value;
+         const valor = quantiaIngressos * 50
+         const tipoDeCliente = document.querySelector('#tipoDesconto')
+         let  desconto 
+
+         if(tipoDeCliente === 'funcionario'){
+            desconto = valor - (valor * 0.10)
+         } else if( tipoDeCliente === 'clienteVip'){
+            desconto =  valor - (valor - 0.05)
+         }else{
+            desconto = valor
+         }
+
+         const valorDoIngresso =  desconto
+         
+         document.querySelector('#valorFinal').innerHTML = valorDoIngresso
+    })
+</script>
+</html>
