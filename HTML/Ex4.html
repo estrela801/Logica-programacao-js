@@ -44,8 +44,10 @@
 	
 	
 	
-	
+	// define que ao pressionar enter o nome será cadastrado
 		document.addEventListener('keydown', (evento) => {
+
+			
 
 			if (evento.key === 'enter'){
 				evento.preventDefault()
@@ -63,25 +65,34 @@
 
 			
 		
-
-		document.querySelector("#btArmazenaNome").addEventListener("click", () => //botão para armazenar os nomes e o evento de escuta
+                  //botão para armazenar os nomes e o evento de escuta
+		document.querySelector("#btArmazenaNome").addEventListener("click", () =>
 			{
 			
 				nomes.push(document.querySelector('#recebeNome').value);//colocar o valor do input dentro do array
 
-				if (nomes.length === 4){//length faz o js olhar tudo que está dentro do array
-					
-					document.querySelector('label[for="recebeNome"]').innerHTML = 'Nome para pesquisar'//quando atingir a quantidade de nomes, trocar o valor do label
-					document.querySelector('#btArmazenaNome').classList.add('oculto')//dentro do css tem uma estilização de display:none para a classe "oculta", estes códigos colocam e tiram está classe dos elementos
+                  //length faz o js olhar tudo que está dentro do array
+				if (nomes.length === 4){
+
+					//quando atingir a quantidade de nomes, trocar o valor do label
+					document.querySelector('label[for="recebeNome"]').innerHTML = 'Nome para pesquisar'
+
+					//adiciona ao botão de armazenar a classe 'oculta' que o deixará com display none
+					document.querySelector('#btArmazenaNome').classList.add('oculto')
+
+					// remove a classe 'oculta do botão de pesquisar, fazendo-o aparecer na tela
 					document.querySelector('#btMostrar').classList.remove('oculto');
 					
 				}
 				
 			});
-
-			document.querySelector('#btMostrar').addEventListener('click', () => {// ao clicar no botão "mostrar" executar 
-				const nomePesquisado = document.querySelector('#recebeNome').value;// cria uma variavel para
+                           // ao clicar no botão "mostrar" executar 
+			document.querySelector('#btMostrar').addEventListener('click', () => {
+				// cria uma variavel para receber os nomes do input
+				const nomePesquisado = document.querySelector('#recebeNome').value;
+				// o método 'includes' verifica se um valor existe no array
 				if(nomes.includes(nomePesquisado)){
+					// ${nomes.indexOf(nomePesquisado)} mostra o indice dentro do array
 					document.querySelector('#resultadoArmazena').innerHTML = `ACHEI na posição:${nomes.indexOf(nomePesquisado)} o nome:${nomePesquisado}`
 				}else{
 					document.querySelector('#resultadoArmazena').innerHTML = `NÃO ACHEI ${nomePesquisado}`
@@ -90,9 +101,6 @@
 
 			
 
-			//TODO:
 			
-			// 3. Após o decimo nome, o campo permite buscar um nome no array.
-			// 4. Exibir se o nome foi encontrado. 
 	</script>
 </html>
