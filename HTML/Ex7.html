@@ -13,7 +13,55 @@
     <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
-    <h1>Nesta pagina criarei um programa que </h1>
+    <h1>Nesta pagina criarei um programa que calcula  </h1>
+
+    <form action="">
+<div class="container-input">
+  
+        <label for="habitantes">Digite o número de habitantes</label>
+        <input type="number" id="habitantes">
+
+        <select  id="NoM">
+          <option value="natalidade">Natalidade</option>
+          <option value="obitos">Óbitos</option>
+        </select>
+  
+        <label for="numeros">Números sla</label>
+        <input type="number" id="numeros">
+
+</div>
+
+      <div class="container-butao">
+        <button type="button" id="calcular">Calcular</button>
+        <button type="button" id="limpar">Limpar</button>
+      </div>
+
+      <div id="resultado"></div>
+    </form>
 </body>
-<script src="Ex7.js"></script>
+<script> 
+    document.querySelector('#calcular').addEventListener('click', function(){
+      const habitantes = document.querySelector('#habitantes').value;
+      const NoM = document.querySelector('#NoM').value;
+      const numeros = document.querySelector('#numeros').value;
+      let msg
+
+     if(habitantes && NoM === 'natalidade'){
+      msg = NoM * 1000 / habitantes;
+     } else if(habitantes && NoM === 'obitos'){
+      msg = NoM * 1000 / habitantes;
+     } else{
+      msg = 'Por favor, coloque informações validas'
+     }
+
+     const resultadoDeTudo = msg;
+
+        document.queryselector('#resultado').innerHTML = resultadoDeTudo
+        console.log(resultadoDeTudo)
+
+      }
+    )
+    
+ 
+</script>
 </html>
