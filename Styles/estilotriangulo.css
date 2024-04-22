@@ -20,6 +20,7 @@ main{
 }
 .container-input{
     display: flex;
+   
     gap: 10px;
 }
 input{
@@ -27,6 +28,11 @@ input{
     background-color: rgb(127, 168, 255);
     padding-left: 8px;
     outline: blue;
+    line-height: 0px;
+}
+select{
+    background-color: rgb(127, 168, 255);
+    border-radius: 10px;
 }
 button{
     margin: 30px 100px;
@@ -59,7 +65,7 @@ button:active{
     border: 2px solid black;
     border-radius: 10px;
     height:30px;
-        font-size: 18px;
+    font-size: 18px;
     padding-top: 9px;
 }
 
