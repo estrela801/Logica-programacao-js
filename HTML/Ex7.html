@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <body>
-    <h1>Nesta pagina criarei um programa que calcula  </h1>
+    <h1>Nesta página criarei um programa que calcula taxas de natalidade e mortalidade</h1>
 
     <form action="">
 <div class="container-input">
@@ -46,18 +46,28 @@
       const numeros = document.querySelector('#numeros').value;
       let msg
 
-     if(habitantes && NoM === 'natalidade'){
+
+      function sla (NoM, habitantes){
+
+        let msg
+     if( NoM === 'natalidade'){
+
       msg = NoM * 1000 / habitantes;
-     } else if(habitantes && NoM === 'obitos'){
+
+     } else if(NoM === 'obitos'){
+
       msg = NoM * 1000 / habitantes;
+
      } else{
+
       msg = 'Por favor, coloque informações validas'
+        
      }
 
-     const resultadoDeTudo = msg;
-
-        document.queryselector('#resultado').innerHTML = resultadoDeTudo
-        console.log(resultadoDeTudo)
+     return msg
+}
+        document.querySelector('#resultado').innerHTML = sla()
+        console.log()
 
       }
     )
