@@ -22,8 +22,8 @@
         <input type="number" id="habitantes">
 
         <select  id="NoM">
-          <option value="natalidade">Natalidade</option>
-          <option value="obitos">Óbitos</option>
+          <option value="N">N</option>
+          <option value="M">M</option>
         </select>
   
         <label for="numeros">Números sla</label>
@@ -40,27 +40,28 @@
     </form>
 </body>
 <script> 
-    document.querySelector('#calcular').addEventListener('click', function(){
-      const habitantes = document.querySelector('#habitantes').value;
+const habitantes = document.querySelector('#habitantes').value;
       const NoM = document.querySelector('#NoM').value;
       const numeros = document.querySelector('#numeros').value;
+    document.querySelector('#calcular').addEventListener('click', function(){
+      
       let msg
 
 
       function sla (NoM, habitantes){
 
         let msg
-     if( NoM === 'natalidade'){
+     if( NoM === 'N'){
 
       msg = NoM * 1000 / habitantes;
 
-     } else if(NoM === 'obitos'){
+     } else if(NoM === 'M'){
 
       msg = NoM * 1000 / habitantes;
 
      } else{
 
-      msg = 'Por favor, coloque informações validas'
+      msg = 'Por favor, coloque i'
         
      }
 
@@ -73,5 +74,10 @@
     )
     
  
+ document.querySelector('#limpar').addEventListener('click', ()=>{
+  document.querySelector('#resultado').innerHTML = ""
+  document.querySelectorAll('input').value = ''
+  
+ })
 </script>
 </html>
