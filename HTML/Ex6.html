@@ -11,28 +11,62 @@
     <link rel="stylesheet" href="../Styles/reset.css" />
     <link rel="stylesheet" href="../Styles/estilotriangulo.css" />
     <link rel="stylesheet" href="../Styles/styles.css" />
+    <style>
+      input[type="number"]::-webkit-inner-spin-button{
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <h1>Vendo notbook no valor de R$3,000</h1>
-    <table>
-      <tr>
-        <td>Produtos</td>
-        <td>Descontos</td>
-      </tr>
-      <tr>
-        <td>3 até 5</td>
-        <td>2%</td>
-      </tr>
-      <tr>
-        <td>6 a 10</td>
-        <td>3%</td>
-      </tr>
-      <tr>
-        <td>mais que 10</td>
-        <td>5%</td>
-      </tr>
-    </table>
+    <h1>Vendo uns produtos ai mano</h1>
+    <p>Arroz, Batata e Frango</p>
+    <!-- ===========TABELA DE CODIGOS -->
+    <div class="container-tabela">
+      <table>
+        <tr>
+          <td>Produtos</td>
+          <td>Codigos</td>
+          <td>Preços</td>
+        </tr>
+        <tr>
+          <td>Arroz</td>
+          <td>1</td>
+          <td>R$15</td>
+        </tr>
+        <tr>
+          <td>Batata</td>
+          <td>2</td>
+          <td>R$4</td>
+        </tr>
+        <tr>
+          <td>Frango</td>
+          <td>3</td>
+          <td>R$18</td>
+        </tr>
+      </table>
+      <!-- ============ TABELA DE DESCONTOS -->
+      <table>
+        <tr>
+          <td>Produtos</td>
+          <td>Descontos</td>
+        </tr>
+        <tr>
+          <td>3 até 5</td>
+          <td>2%</td>
+        </tr>
+        <tr>
+          <td>6 a 10</td>
+          <td>3%</td>
+        </tr>
+        <tr>
+          <td>mais que 10</td>
+          <td>5%</td>
+        </tr>
+      </table>
+    </div>
     <form action="">
+      <label for="codigo">Digite o codigo do Produto</label>
+      <input type="number" id="codigo" min="0" max="3" step="1" required autofocus placeholder="Digita o produto ai mano">
       <label for="sla">Digite quantas unidades</label>
       <input
         type="number"
@@ -54,43 +88,48 @@
 
    
 
-         document.querySelector('#desconto').addEventListener('click', function  () {
+   document.querySelector('#desconto').addEventListener('click', function  () {
 
   // document.querySelector('#resultado').innerHTML = 'rodrigo'
 
-        
+          const codigoP = document.querySelector('#codigo')        
           const quantidade = parseFloat(document.querySelector('#sla').value);
           const valor = quantidade * 3000
           let msg
-    
-
-      if(!isNaN(quantidade)){
-
-     
-           if (quantidade >= 3 && quantidade <= 5) { 
-               msg = valor - (valor * 0.02)
-           } else if(quantidade <= 10 && quantidade >= 6){
-               msg = valor - (valor * 0.03)
-           } else if(quantidade > 10){
-               msg = valor -  (valor * 0.05)
-           } else{
-              msg = valor
-           }
-             const valorComDesconto = msg
-              document.querySelector('#resultado').innerHTML = msg
-
- }  else{
+          let produtos = [
+            {
+              produto: 'Arroz',
+              codigo: 1,
+              preco: 15
+            },
+            {
+              produto: 'Batata',
+              codigo: 2,
+              preco: 4,
+            },
+            {
+              produto: 'Frango',
+              codigo: 3,
+              preco: 18,
+            }
+            
+          ]
   
-  document.querySelector('#resultado').innerHTML = 'Por favor, digite um número!'
- }
-             
-  })
-         
+          })
 
-    document.querySelector('#limpa').addEventListener('click', () => {
-      document.querySelector('#resultado').innerHTML = ''
-    })
+          for(i=0; i > produtos.lenght; i++){
+
+
+            if(produtos[i].codigo === codigoP){
+
+            }
+
+
+
+
+          }
     
 
   </script>
+  <script src="../Scripts/navbar.js"></script>
 </html>
