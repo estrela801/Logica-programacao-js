@@ -53,18 +53,24 @@ button{
 a{
     margin-left: 30px;
 }
+.container-tabela{
+    display: flex;
+}
 table{
-    margin: 20px 10px;
+    margin: 20px 20px;
     border: 3px solid black;
-    padding: 60px;
     text-align: center;
     
 }
 tr{
-    margin: 3px;
+    margin: 15px;
 }
 td{
     margin: 1px 3px;
+    padding: 0 10px;
+}
+#codigo{
+    width: 150px;
 }
 
 
