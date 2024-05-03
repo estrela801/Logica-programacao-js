@@ -1,48 +1,6 @@
 body{
     min-height: 100vh;
 }
-/* .logo-menu{
-    display: flex;
-    position: relative;
-    top: 0;
-    height: 90px;
-    justify-content: space-between;
-    flex-wrap: wrap;  
-    background-color: #555f67; 
-
-}
-.logo{
-    display:flex ;
-}
-.menu-navegacao{
-    height: 90px;
-    margin-inline-end: 30px;
-    
-}
-.menu-navegacao>ul{
-    display: flex;
-    height: 100%;  
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.menu-navegacao a {
-    flex-shrink: 50%;
-    display: inline-flex;
-    color: #d7dbde;
-    background-color: #537590 ;
-    padding: 12px;
-    margin: 0;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    height: 100%;
-    /* box-shadow: 6.5px 6.5px 1px rgb(58, 80, 124); 
-    border:  3px solid black;
-   
-}*/
 
 
  .menu-navegacao a:hover{
