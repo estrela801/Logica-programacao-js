@@ -17,7 +17,6 @@ body{
 }
 header{
     top:0px;
-    
     width: 100%;
 }
 nav{
@@ -50,9 +49,7 @@ button{
     background-color: rgb(255, 251, 0);
     font-size: 1.2rem;
 } */
-a{
-    margin-left: 30px;
-}
+
 .container-tabela{
     display: flex;
 }

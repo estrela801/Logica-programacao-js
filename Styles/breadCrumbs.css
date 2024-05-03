@@ -1,7 +1,7 @@
 body{
     min-height: 100vh;
 }
-.logo-menu{
+/* .logo-menu{
     display: flex;
     position: relative;
     top: 0;
@@ -39,10 +39,10 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     height: 100%;
-    /* box-shadow: 6.5px 6.5px 1px rgb(58, 80, 124); */
+    /* box-shadow: 6.5px 6.5px 1px rgb(58, 80, 124); 
     border:  3px solid black;
    
-}
+}*/
 
 
  .menu-navegacao a:hover{
@@ -60,7 +60,7 @@ body{
     to{
     box-shadow: 4.5px 7.5px 1px rgb(45, 71, 122);
     }
-}
+} */
 
 
 .migalha-de-pao{
