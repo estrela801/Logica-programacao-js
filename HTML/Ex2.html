@@ -34,8 +34,8 @@
             <label for="tipoDesconto">Diga-me quem você é:</label>
             <select id="tipoDesconto">
                 <option value="funcionario">Funcionario</option>
-                <option value="clienteVip">Cliente Vip</option>
-                <option value="clienteNormal">Cliente comum</option>
+                <option value="clientevip">Cliente Vip</option>
+                <option value="clientenormal">Cliente comum</option>
             </select>
         </div>
 
@@ -44,24 +44,29 @@
     </form>
 </body>
 <script>
-    document.querySelector('#btCalc').addEventListener('click', function(){
-         const quantiaIngressos = document.querySelector('#ingresso').value;
-         const valor = quantiaIngressos * 50
-         const tipoDeCliente = document.querySelector('#tipoDesconto')
-         let  desconto 
+  document.querySelector('#btCalc').addEventListener('click',() => {
+const ingressos = document.querySelector('#ingresso').value
+   const tipoDesconto = document.querySelector('#tipoDesconto')
+   const valorIngresso = ingressos * 50
+   const resultado = CalculoDesconto(valorIngresso,tipoDesconto)
+   document.querySelector('.valorFinal').innerHTML = resultado
+  
+   function CalculoDesconto(valorIngresso,tipoDesconto){
+    let desconto
+      if(tipoDesconto === 'funcionario'){
+        desconto = valorIngresso - (valorIngresso - 0.1) 
+      }else if(tipoDesconto === 'clientevip'){
+        desconto = valorIngresso - (valorIngresso - 0.05)
+      }else{
+        desconto = valorIngresso
+      }
+      return desconto
+   }
 
-         if(tipoDeCliente === 'funcionario'){
-            desconto = valor - (valor * 0.10)
-         } else if( tipoDeCliente === 'clienteVip'){
-            desconto =  valor - (valor - 0.05)
-         }else{
-            desconto = valor
-         }
 
-         const valorDoIngresso =  desconto
-         
-         document.querySelector('#valorFinal').innerHTML = valorDoIngresso
-    })
+  })
+   
+    
 </script>
 <script src="../Scripts/navbar.js"></script>
 </html>
