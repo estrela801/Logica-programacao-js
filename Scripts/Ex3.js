@@ -1,10 +1,11 @@
-let mensagem, erro
 
-erro = 'Algo deu errado, por favor verifique se você declarou os números corretamente aaaaaaaaa '
+
+
 function resultadoPartida(time1, time2, gols1,gols2){
-if(time1, time2, gols1,gols2 === null){
-        mensagem = 'Por favor digite um número'
-
+if(time1, time2, gols1,gols2 === ''){
+        let mensagem 
+}else{
+        
         if(gols1 > gols2){
                 mensagem = `O ${time1} está vencendo`;
                 console.log(mensagem)
@@ -14,12 +15,9 @@ if(time1, time2, gols1,gols2 === null){
         } else {
                 mensagem = 'O jogo está empatado';
         }
-                
-        
-        
+        return mensagem  
 }
 
-return mensagem ?? erro
 }
 console.log(gols1)
 console.log(gols2)
@@ -27,4 +25,3 @@ console.log(gols2)
 console.log(time1)
 console.log(time2)
 
-console.log(mensagem)
