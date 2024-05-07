@@ -1,0 +1,78 @@
+/* tamanhos de telas
+mobile: até 400px
+tablets: até 768px
+TVs: de 1921px ao infinito
+
+
+
+*/
+
+/* mobile */
+@media screen and (max-width: 400px){
+    body{
+        margin-bottom: 200px;
+    }
+  .titulo-pagina{
+    width: 100%;
+    font-size: 2rem;
+  }
+  header{
+    width: 100vw;
+    height: 100px;
+  }
+  ul{
+    width: 50px;
+  }
+  ul,li,a{
+    width: 30px;
+    height: 20px;
+    margin: 0 10px;   
+    /* padding: 20px; */
+  }
+  p{
+    font-size: 1rem;
+  }
+  .migalha-de-pao{
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  form{
+    display: flex;
+    flex-flow: column wrap;
+  }
+ .container-tabela{
+    display: flex;
+    flex-flow: column wrap;
+}
+button{
+    border-radius:10px;
+    padding: 15px;
+    margin: 10px;
+}
+input{
+    margin: 10px 0;
+    border-radius:30px ;
+    border: 3px solid black;
+    outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+  }
+
+
+}
+
+
+
+
+
+
+/* tablets */
+@media screen and (max-width: 768px){
+
+}
+/* TVs */
+@media screen and (min-width:1921px){
+
+}

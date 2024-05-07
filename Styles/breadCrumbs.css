@@ -2,25 +2,6 @@ body{
     min-height: 100vh;
 }
 
-
- .menu-navegacao a:hover{
-    transform: translateY(-3.5px);
-    /* background-color: #365772 ; */
-    transition: all 100ms;
-    border: outset  rgb(255, 255, 255);
-    animation: apper 600ms  forwards;
-}
-@keyframes apper {
-   from{
-    box-shadow: 1px 1px 1px rgb(45, 71, 122);
-     }
-   
-    to{
-    box-shadow: 4.5px 7.5px 1px rgb(45, 71, 122);
-    }
-} */
-
-
 .migalha-de-pao{
     height: 50px;
 }
@@ -29,16 +10,16 @@ body{
     display: flex;
     margin-inline-start:1.5rem;
 }
-.migalha-de.migalha-de-pao li{
+.migalha-de-pao li{
     display: inline-flex;
     height: 100%;
-    align-items: center;
+    align-items: center; 
 }
 .migalha-de-pao a{
     display: inline-flex;
-    align-items:center;
-    height: 100%;
-    padding: 0 1rem;
+    /* align-items:center; */
+    height: 100%;   
+    padding: 0 1.2rem;
     font-size: 1rem;
     text-decoration: none;
     text-transform: capitalize;
@@ -53,7 +34,7 @@ body{
 .migalha-de-pao a{
     color: blue;
     height: inherit;
-    margin-top:6vh;
+    /* margin-top:6vh; */
    
 }
 .migalha-de-pao a:hover{
@@ -112,10 +93,4 @@ body{
 a{ 
     cursor: initial;  /* retira estilos de cursor*/
     text-decoration: none; 
-}
-@media(min-width:200px) and (max-width:600){
-   body{
-    background-color: blue;
-    display: none;
-} 
 }
