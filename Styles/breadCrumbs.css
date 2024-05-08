@@ -38,7 +38,8 @@ body{
    
 }
 .migalha-de-pao a:hover{
-    cursor: pointer; text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 .migalha-de-pao li:not(:last-child)>a{
     color: rgb(0, 0, 0);   
@@ -51,11 +52,11 @@ body{
     color: salmon ;
     border-radius: 10px;
     height: inherit;
-    margin-top: 6vh;
+    /* margin-top: 6vh; */
     
 } 
 .migalha-de-pao li:last-child>a:hover{
-    cursor: move;
+    cursor: crosshair;
     text-decoration: none;
 }
 

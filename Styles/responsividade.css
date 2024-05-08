@@ -8,71 +8,108 @@ TVs: de 1921px ao infinito
 */
 
 /* mobile */
-@media screen and (max-width: 400px){
-    body{
-        margin-bottom: 200px;
-    }
-  .titulo-pagina{
+@media screen and (max-width: 400px) {
+  /* ------------  GERAL ------------ */
+  body {
+    margin-bottom: 200px;
+  }
+  .titulo-pagina {
     width: 100%;
     font-size: 2rem;
   }
-  header{
-    width: 100vw;
-    height: 100px;
+  header {
+    top: 0;
+    width: 100%;
+    /* height: 100px; */
   }
-  ul{
+  .migalha-de-pao {
+    width: inherit;
+    order: 1;
+    margin: 0 0 300px 0;
+    display: none;
+  }
+  .migalha-de-pao li:not(:last-child):after {
+    content: "";
+  }
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  li a {
     width: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
   }
-  ul,li,a{
-    width: 30px;
-    height: 20px;
-    margin: 0 10px;   
+  ul,
+  li,
+  a {
+    /* width: 30px; */
+    height: 10px;
+    margin: 10px 10px;
     /* padding: 20px; */
   }
-  p{
+  .migalha-de-pao li:last-child > a {
+    background-color: transparent;
+    color: black;
+  }
+  a {
+    line-height: 12px;
+  }
+  p {
     font-size: 1rem;
   }
-  .migalha-de-pao{
-    width: inherit;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  form{
+  form {
     display: flex;
     flex-flow: column wrap;
   }
- .container-tabela{
+  .container-tabela {
     display: flex;
     flex-flow: column wrap;
-}
-button{
-    border-radius:10px;
+  }
+  button {
+    border-radius: 10px;
     padding: 15px;
     margin: 10px;
-}
-input{
+  }
+  input {
     margin: 10px 0;
-    border-radius:30px ;
+    border-radius: 30px;
     border: 3px solid black;
     outline: none;
-}
-input[type="number"]::-webkit-inner-spin-button{
+  }
+  input[type="number"]::-webkit-inner-spin-button {
     display: none;
   }
 
+  .migalha-de-pao {
+    width: 300px;
+  }
 
+  /* -------------------- INDEX --------------- */
+  section {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  h1 {
+    margin: 9px 1px 30px;
+    width: 210px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 30px;
+  }
+  p {
+    font-size: clamp(12px, 1.6rem, 3rem);
+    width: 210px;
+  }
 }
-
-
-
-
-
 
 /* tablets */
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 768px) {
 }
 /* TVs */
-@media screen and (min-width:1921px){
-
+@media screen and (min-width: 1921px) {
 }
+  
