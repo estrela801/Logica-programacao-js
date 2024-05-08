@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Styles/estilotriangulo.css" />
     <link rel="stylesheet" href="../Styles/styles.css" /> -->
     <script src="/Scripts/estilos.js"></script>
+    <script src="/Scripts/responsividade.js"></script>
   </head>
   <body>
     <h1 class="titulo-pagina  ">Ingresso para o jogo dos Lakers</h1>
@@ -49,9 +50,10 @@
       const tipoDesconto = document.querySelector("#tipoDesconto");
       const valorIngresso = ingressos * 50;
       const resultado = CalculoDesconto(valorIngresso, tipoDesconto);
+      // let desconto; 
       
       function CalculoDesconto(valorIngresso, tipoDesconto) {
-        let desconto; 
+        let desconto
         if (tipoDesconto === "funcionario") {
           desconto = valorIngresso - (valorIngresso - 0.1);
         } else if (tipoDesconto === "clientevip") {
@@ -62,7 +64,7 @@
         return desconto;
       }
 
-      document.querySelector("#valorFinal").innerHTML = ;
+      document.querySelector("#valorFinal").innerHTML = desconto;
     });
   </script>
   <script src="../Scripts/navbar.js"></script>
