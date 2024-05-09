@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício complementar 1</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      rel="stylesheet"
+    />  
+    <!-- <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="../Styles/estilotriangulo.css" />
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="/Styles/breadCrumbs.css  "> -->
+    <script src="/Scripts/estilos.js"></script>
+    <script src="/Scripts/responsividade.js"></script>
+   
+ 
+  </head>
+  <body>
+
+    
+    <h1 class="titulo-pagina">Exercício complamentar 1</h1>
+    <h2>
+      Neste site há um programa que define três tipos de triângulos: <br />
+    </h2>
+
+    <p>
+      1º Equilátero: todos os lados tem o mesmo tamanho <br />
+      2º Isósceles: dois lados tem o mesmo tamanho, mas o terceiro é diferente
+      <br />
+      3º Escaleno: os três lados do triângulo tem tamanhos diferentes
+    </p>
+    <main>
+    <form action="">
+      
+     
+
+         <div class="container-input">
+
+            <label for="lado1">Lado1</label>
+            <input type="number" id="lado1" min="0" step="0.1"/>
+        
+
+          
+            <label for="lado2">Lado2</label>
+            <input type="number" id="lado2" min="0" step="0.1" />
+         
+
+          
+            <label for="lado3">Lado3</label>
+            <input type="number" id="lado3" min="0" step="0.1"/>
+          
+        
+          </div>
+        
+          <div class="container-butao">
+          <button type="button" id="tipoTriangulo">
+            Descubra o tipo de triângulo
+          </button>
+          <button type="reset" id="limpaTriangulo">Limpar</button>
+        </div>
+
+    </form>
+
+    <p id="resultado"></p>
+
+  </main>
+  </body>
+  <script src="/Scripts/Ex1.js"></script>
+  <script>
+    document
+      .querySelector("#tipoTriangulo")
+      .addEventListener("click", function () {
+        const lado1 = document.querySelector("#lado1").value;
+        const lado2 = document.querySelector("#lado2").value;
+        const lado3 = document.querySelector("#lado3").value;
+
+        const resultado = tipoTriangulo(lado1, lado2, lado3);
+
+        document.querySelector("#resultado").innerHTML = resultado;
+      });
+
+    document
+      .querySelector("#limpaTriangulo")
+      .addEventListener("click", function () {
+        document.querySelector("#resultado").innerHTML = "";
+      });
+  </script>
+  <script src="../Scripts/navbar.js"></script>
+</html>
