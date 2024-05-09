@@ -1,23 +1,16 @@
 
    const ancoras = [
-     {'url': '/index.html', 'texto': 'HOME'},
-     {'url': '/HTML/Ex1.html', 'texto':'Exerc-1'},
-     {'url': '/HTML/Ex2.html', 'texto':'Exerc-2'},
-     {'url': '/HTML/Ex3.html', 'texto':'Exerc-3'},
-     {'url': '/HTML/Ex4.html', 'texto':'Exerc-4'},
-     {'url': '/HTML/Ex5.html', 'texto':'Exerc-5'},
-     {'url': '/HTML/Ex6.html', 'texto':'Exerc-6'},
-     {'url': '/HTML/Ex7.html', 'texto':'Exerc-7'},
-     
-]
-const button = [
-     
-]
+     { url: "/index.html", texto: "HOME" },
+     { url: "/HTML/exercicio1.html", texto: "Exerc-1" },
+     { url: "/HTML/Ex2.html", texto: "Exerc-2" },
+     { url: "/HTML/Ex3.html", texto: "Exerc-3" },
+     { url: "/HTML/Ex4.html", texto: "Exerc-4" },
+     { url: "/HTML/Ex5.html", texto: "Exerc-5" },
+     { url: "/HTML/Ex6.html", texto: "Exerc-6" },
+     { url: "/HTML/Ex7.html", texto: "Exerc-7" },
+   ];
 
-function criaButaoSanduba(butaoDoSanduba){
-     const butaoDoSanduba = document.createElement('button').innerHTML =  'butao'
-     
-}
+
 
 function criaAncora(url, texto){
      const ancora = document.createElement('a')
@@ -50,7 +43,7 @@ nav.appendChild(divMenu)
 
 const header = document.createElement('header')
 header.appendChild(divMenu)
-header.appendChild(criaButaoSanduba())
+
 
 document.body.insertBefore(header, document.body.firstChild)
 
