@@ -46,11 +46,12 @@
   </body>
   <script>
       document.querySelector("#btCalc").addEventListener("click", () => {
+        const ingressos = document.querySelector("#ingresso").value;
+        const tipoDesconto = document.querySelector("#tipoDesconto");
+        const valorIngresso = ingressos * 50;
+        const resultado = CalculoDesconto(valorIngresso, tipoDesconto);
+
         function CalculoDesconto(valorIngresso, tipoDesconto) {
-      const ingressos = document.querySelector("#ingresso").value;
-      const tipoDesconto = document.querySelector("#tipoDesconto");
-      const valorIngresso = ingressos * 50;
-      const resultado = CalculoDesconto(valorIngresso, tipoDesconto);
       // let desconto; 
       
         let desconto
