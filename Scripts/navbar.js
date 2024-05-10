@@ -10,14 +10,9 @@
      { url: "/HTML/Ex7.html", texto: "Exerc-7" },
    ];
 
-
-<<<<<<< HEAD
 function criaButaoSanduba(){
      const butaoDoSanduba = document.createElement('button').innerHTML =  'butao'
-     
 }
-=======
->>>>>>> 3464d05e24d3aaf909de4ec6926dab38f3c47d72
 
 function criaAncora(url, texto){
      const ancora = document.createElement('a')
