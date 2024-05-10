@@ -1,7 +1,7 @@
 const links = [
      {'rel' : 'stylesheet', 'href' : '/Styles/reset.css'},
      {'rel' : 'stylesheet', 'href' : '/Styles/styles.css'},
-     {'rel' : 'stylesheet', 'href' : '/Styles/breadcrumbs.css'},
+     {'rel' : 'stylesheet', 'href' : '/Styles/breadCrumbs.css'},
      {'rel' : 'stylesheet', 'href' : '/Styles/responsividade.css'},
 
 ]

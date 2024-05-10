@@ -1,23 +1,23 @@
 
    const ancoras = [
-     {'url': '/index.html', 'texto': 'HOME'},
-     {'url': '/HTML/Ex1.html', 'texto':'Exerc-1'},
-     {'url': '/HTML/Ex2.html', 'texto':'Exerc-2'},
-     {'url': '/HTML/Ex3.html', 'texto':'Exerc-3'},
-     {'url': '/HTML/Ex4.html', 'texto':'Exerc-4'},
-     {'url': '/HTML/Ex5.html', 'texto':'Exerc-5'},
-     {'url': '/HTML/Ex6.html', 'texto':'Exerc-6'},
-     {'url': '/HTML/Ex7.html', 'texto':'Exerc-7'},
-     
-]
-const button = [
-     
-]
+     { url: "/index.html", texto: "HOME" },
+     { url: "/HTML/exercicio1.html", texto: "Exerc-1" },
+     { url: "/HTML/Ex2.html", texto: "Exerc-2" },
+     { url: "/HTML/Ex3.html", texto: "Exerc-3" },
+     { url: "/HTML/Ex4.html", texto: "Exerc-4" },
+     { url: "/HTML/Ex5.html", texto: "Exerc-5" },
+     { url: "/HTML/Ex6.html", texto: "Exerc-6" },
+     { url: "/HTML/Ex7.html", texto: "Exerc-7" },
+   ];
 
+
+<<<<<<< HEAD
 function criaButaoSanduba(){
      const butaoDoSanduba = document.createElement('button').innerHTML =  'butao'
      
 }
+=======
+>>>>>>> 3464d05e24d3aaf909de4ec6926dab38f3c47d72
 
 function criaAncora(url, texto){
      const ancora = document.createElement('a')
