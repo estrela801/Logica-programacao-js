@@ -53,7 +53,7 @@
 
 			if (evento.key === 'enter'){
 				evento.preventDefault()
-				if (nomes.length < 4){
+				if (nomes.length < 10){
 					document.querySelector('#btArmazenaNome').click();
 				}else{
 					document.querySelector('#btMostrar').click();
@@ -74,7 +74,7 @@
 				nomes.push(document.querySelector('#recebeNome').value);//colocar o valor do input dentro do array
 
                   //length faz o js olhar tudo que está dentro do array
-				if (nomes.length === 4){
+				if (nomes.length === 10){
 
 					//quando atingir a quantidade de nomes, trocar o valor do label
 					document.querySelector('label[for="recebeNome"]').innerHTML = 'Nome para pesquisar'
