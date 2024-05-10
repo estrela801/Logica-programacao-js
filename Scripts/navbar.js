@@ -14,7 +14,7 @@ const button = [
      
 ]
 
-function criaButaoSanduba(butaoDoSanduba){
+function criaButaoSanduba(){
      const butaoDoSanduba = document.createElement('button').innerHTML =  'butao'
      
 }
@@ -50,7 +50,6 @@ nav.appendChild(divMenu)
 
 const header = document.createElement('header')
 header.appendChild(divMenu)
-header.appendChild(criaButaoSanduba())
 
 document.body.insertBefore(header, document.body.firstChild)
 

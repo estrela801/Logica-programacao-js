@@ -20,20 +20,21 @@ TVs: de 1921px ao infinito
   header {
     top: 0;
     width: 100%;
+    display: block;
     /* height: 100px; */
   }
   .migalha-de-pao {
     width: inherit;
     order: 1;
     margin: 0 0 300px 0;
-    display: none;
+    /* display: none; */
   }
   .migalha-de-pao li:not(:last-child):after {
     content: "";
   }
   ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
   }
   li a {
     width: 50px;
