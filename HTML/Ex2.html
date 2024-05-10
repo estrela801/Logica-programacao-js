@@ -46,25 +46,27 @@
   </body>
   <script>
       document.querySelector("#btCalc").addEventListener("click", () => {
+        function CalculoDesconto(valorIngresso, tipoDesconto) {
       const ingressos = document.querySelector("#ingresso").value;
       const tipoDesconto = document.querySelector("#tipoDesconto");
       const valorIngresso = ingressos * 50;
       const resultado = CalculoDesconto(valorIngresso, tipoDesconto);
       // let desconto; 
       
-      function CalculoDesconto(valorIngresso, tipoDesconto) {
         let desconto
-        if (tipoDesconto === "funcionario") {
+        if (tipoDesconto == "funcionario") {
           desconto = valorIngresso - (valorIngresso - 0.1);
-        } else if (tipoDesconto === "clientevip") {
+        } else if (tipoDesconto == "clientevip") {
           desconto = valorIngresso - (valorIngresso - 0.05);
         } else {
           desconto = valorIngresso;
         }
         return desconto;
+        
+        const resultadoFinal = CalculoDesconto(valorIngresso, tipoDesconto)
+        console.log(resultadoFinal)
+        document.querySelector("#valorFinal").innerHTML = resultadoFinal;
       }
-
-      document.querySelector("#valorFinal").innerHTML = desconto;
     });
   </script>
   <script src="../Scripts/navbar.js"></script>
