@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 5</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
@@ -13,75 +13,99 @@
     <link rel="stylesheet" href="../Styles/styles.css"> -->
     <script src="/Scripts/estilos.js"></script>
     <script src="/Scripts/responsividade.js" defer></script>
-</head>
-<body>
-  <h1>Posto de gasolina</h1>
-  <table>
-  
-  </table>
+  </head>
+  <body>
+    <h1>Posto de gasolina</h1>
+    <table>
+      <tr>
+        <td>Álcool</td>
+      </tr>
+      <tr>
+        <td>Até 20 litros</td>
+        <td>3% de desconto</td>
+      </tr>
+      <tr>
+        <td>Acima de 20 litros</td>
+        <td>5% de desconto</td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>Gasolina</td>
+      </tr>
+      <tr>
+        <td>Até 20 litros</td>
+        <td>4% de desconto</td>
+      </tr>
+      <tr>
+        <td>Acima de 20 litros</td>
+        <td>6% de desconto</td>
+      </tr>
+    </table>
     <form action="">
       <label for="gasolina">Quantos litros de gasolina:</label>
-      <input type="text" id="gasolina">
-<br>
+      <input type="text" id="gasolina" />
+      <br />
       <label for="alcool">Quantidade de litros de alcool:</label>
-      <input type="text" id="alcool">
+      <input type="text" id="alcool" />
+      <p>Por favor escolha apenas um</p>
 
       <div class="container-butao">
         <button type="button" id="calcular">Calcular</button>
         <button type="button" id="limpar">Limpar</button>
       </div>
 
-      <p id="resultado"></p>
+      <p id="resultadoGasolina"></p>
+      <p id="resultadoAlcool"></p>
     </form>
-</body>
-<script>
+  </body>
+  <script>
+    document.querySelector("#calcular").addEventListener("click", () => {
+      const gasolina = parseFloat(document.querySelector("#gasolina").value);
+      const alcool = parseFloat(document.querySelector("#alcool").value);
 
-        document.querySelector('#calcular').addEventListener('click', () => {
-        const gasolina = parseFloat( document.querySelector('#gasolina').value );
-        const alcool = parseFloat( document.querySelector('#alcool').value )
-
-
-        const  valor = Desconto(gasolina, alcool)
       
-       document.querySelector('#resultado').innerHTML = valor
- })
+      const valorGasolina = DescontoGasolina(gasolina);
+      const valorAlcool = descontoAlcool(alcool);
+
+      document.querySelector('#resultadoGasolina').innerHTML = valorGasolina
+      document.querySelector("#resultadoAlcool").innerHTML = valorAlcool
+    });
 
 
-         function Desconto(gasolina, alcool){
+
+    function DescontoGasolina(gasolina) {
+      
+      let msgGasolina;
       
 
-        let msg
+    
+      if (gasolina >= 20) {
+        msgGasolina= gasolina - gasolina * (4 / 100);
+      } else if (gasolina < 20) {   
+        msgGasolina = gasolina - gasolina * (6 / 100);
+      }
 
-         if(alcool > 20){
+      return  msgGasolina
+   
+    }
 
-               msg = alcool  - (alcool * (3/ 100 ))
+    function descontoAlcool(alcool){
+      let msgAlcool
+        if (alcool > 20) {
+        msgAlcool = alcool - alcool * (3 / 100);
+      } else if (alcool <= 20) {
+        msgAlcool = alcool - alcool * (5 / 100);
+      }
+      return msgAlcool
+    }
 
-         }  else if(alcool <= 20){
+    
 
-               msg = alcool  - (alcool *(5 / 100 ))
-
-         }  else if (gasolina >= 20 ){
-
-               msg = gasolina   - (gasolina * (4/ 100 ) )
-
-         } else if(gasolina < 20){
-
-               msg = gasolina -( gasolina *( 6/ 100))
-
-         }
-return msg
-
-        }
-        
-
-
-    document.querySelector('#limpar').addEventListener('click', () => {
-
-        document.querySelector('#resultado').innerHTML = ''
-
-    })
-
-
+    document.querySelector("#limpar").addEventListener("click", () => {
+      document.querySelector("#resultadoAlcool").innerHTML = '';
+      document.querySelector("#resultadoGasolina").innerHTML = '';
+});
 </script>
-<script src="../Scripts/navbar.js"></script>
+  <script src="../Scripts/navbar.js"></script>
 </html>
