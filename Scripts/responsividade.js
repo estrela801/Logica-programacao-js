@@ -1,6 +1,4 @@
- const larguraDaTela = window.innerWidth
- const menuDrop = document.querySelector('.migalha-de-pao')
-
- console.log('fffffffffff')
-
+function mostrar() {
+    document.querySelector('.migalha-de-pao').classList.toggle('.mostrar')
+}
  

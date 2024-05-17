@@ -15,72 +15,80 @@
     <script src="/Scripts/responsividade.js"></script>
 </head>
 <body>
-    <h1 class="titulo-pagina">Nesta página criarei um programa que calcula taxas de natalidade e mortalidade</h1>
+    <button type="button" class="btn-responsividade">E</button>
+       <div>
 
-    <form action="">
-
+        <h3>Taxa de Natalidade e Mortalidade</h3>
+<div class="container-input">
   
-        <label for="habitantes">Digite o número de habitantes</label>
-        <input type="number" id="habitantes">
-
-        <select  id="NoM">
-          <option value="N">N</option>
-          <option value="M">M</option>
-        </select>
+          <label for="nHabitantes">Número de Habitantes:</label><br>
+          <input type="number" min="0" id="nHabitantes" class="entradas"><br>
   
-        <label for="numeros">Números sla</label>
-        <input type="number" id="numeros">
+          <label for="nNascimentos">Número de nascimentos:</label><br>
+          <input type="number" min="0" id="nNascimentos" class="entradas"><br>
+  
+          <label for="nObitos">Número de óbitos:</label><br>
+          <input type="number" min="0" id="nObitos" class="ultimo entradas"><br><br>
+  
+          <!--  -->
+          <input type="radio" name="escolha" id="natalidade" value="natalidade" class="customisar" oninput="consultar()">
+          <label for="natalidade">Taxa de natalidade</label>
+  
+          <input type="radio" name="escolha" id="mortalidade" value="mortalidade" class="customisar" oninput="consultar()">
+          <label for="mortalidade">Taxa de mortalidade</label><br>
+</div>
+
+        <p id="resultado"></p>
 
 
-
-      
-        <button type="button" id="calcular">Calcular</button>
-        <button type="button" id="limpar">Limpar</button>
-      </div>
-
-      <div id="resultado"></div>
-    </form>
+        <div class="container-butao">
+          <button type="button" onclick="limpar()">Limpar tudo</button>
+        </div>
+   
+    </div>
 </body>
 <script> 
-const habitantes = document.querySelector('#habitantes').value;
-      const NoM = document.querySelector('#NoM').value;
-      const numeros = document.querySelector('#numeros').value;
-    document.querySelector('#calcular').addEventListener('click', function(){
-      
-      let msg
+  function consultar() {
 
+            const habitantes = Number(document.getElementById('nHabitantes').value);
+            const nascimentos = Number(document.getElementById('nNascimentos').value);
+            const obitos = Number(document.getElementById('nObitos').value);
 
-      function sla (NoM, habitantes){
+            var natalidadeCheck = document.getElementById('natalidade');
+            var mortalidadeCheck = document.getElementById('mortalidade');
 
-        let msg
-     if( NoM === 'N'){
+            if (natalidadeCheck.checked) {
 
-      msg = NoM * 1000 / habitantes;
+                if (nascimentos <= 0 || habitantes <= 0) {
+                    document.getElementById('resultado').innerHTML = 'Por favor digite o número de nascimento dos habitantes';
+                }else {
+                    resultado = ((nascimentos * 1000) / habitantes);
+                    document.getElementById('resultado').innerHTML = `Taxa de natalidade: ${resultado.toFixed(0)} nascimento(s) por mil de habitantes`;
+                }
 
-     } else if(NoM === 'M'){
+                
+            }else {
 
-      msg = NoM * 1000 / habitantes;
+                if (obitos <= 0 || habitantes <= 0) {
+                    document.getElementById('resultado').innerHTML = 'por favor digite o número de óbitos dos habitantes ';
+                }else {
+                    resultado = ((obitos * 1000) / habitantes);
+                    document.getElementById('resultado').innerHTML = `Taxa de mortalidade: ${resultado.toFixed(0)} morte(s) por mil de habitantes`;
+                }
+            }
 
-     } else{
+        }
 
-      msg = 'Por favor, coloque i'
-        
-     }
+        function limpar(){
+            document.getElementById('nHabitantes').value = "";
+            document.getElementById('nNascimentos').value = "";
+            document.getElementById('nObitos').value = "";
+            document.getElementById('natalidade').checked = false;
+            document.getElementById('mortalidade').checked = false;
+            document.getElementById('resultado').innerHTML = "";
+        }
 
-     return msg
-}
-        document.querySelector('#resultado').innerHTML = sla()
-        console.log()
-
-      }
-    )
-    
- 
- document.querySelector('#limpar').addEventListener('click', ()=>{
-  document.querySelector('#resultado').innerHTML = ""
-  document.querySelectorAll('input').value = ''
-  
- })
+    </script>
 </script>
 <script src="../Scripts/navbar.js"></script>
 </html>

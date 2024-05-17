@@ -8,20 +8,24 @@ TVs: de 1921px ao infinito
 */
 
 /* mobile */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   /* ------------  GERAL ------------ */
   body {
     margin-bottom: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .titulo-pagina {
-    width: 100%;
+  .titulo-pagina,h2 {
+    width: 100px;
     font-size: 2rem;
+    transform: translateX(-100px);
   }
   header {
-    top: 0;
-    width: 100%;
-    display: block;
-    /* height: 100px; */
+   position: absolute;
+   transform: translateX(200%);
+   display: none;
   }
   .migalha-de-pao {
     width: inherit;
@@ -75,6 +79,7 @@ TVs: de 1921px ao infinito
     margin: 10px;
   }
   input {
+    padding: 20px;
     margin: 10px 0;
     border-radius: 30px;
     border: 3px solid black;
@@ -104,6 +109,28 @@ TVs: de 1921px ao infinito
   p {
     font-size: clamp(12px, 1.6rem, 3rem);
     width: 210px;
+  }
+  .container-input{
+    margin-left: 30px;
+    width: 150px; 
+  }
+  .btn-responsividade{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background-color: grey;
+  }
+  .mortrar{
+animation: mostrar 3s;
+  }
+  @keyframes mostrar {
+    from{
+      transform: translateX(200%);
+    }
+    to{
+      transform: translateX(-200%);
+    }
   }
 }
 

@@ -1,6 +1,9 @@
 :root{
     --font-size: 10px;
 }
+.btn-responsividade{
+    display: none;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -8,17 +11,11 @@ body{
     align-items: center;
     font-family: "Anta", sans-serif;
 
-    margin: 250px 10vw ;
-}
-body{
     background-color: rgb(156, 255, 255);
     line-height: 2.2rem;
     font-weight: 700;
 }
-header{
-    top:0px;
-    width: 100%;        
-}
+
 nav{
     margin: 30px ;
     background-color: rgb(102, 255, 255);
