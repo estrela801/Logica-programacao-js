@@ -19,9 +19,5 @@ if(time1, time2, gols1,gols2 === ''){
 }
 
 }
-console.log(gols1)
-console.log(gols2)
 
-console.log(time1)
-console.log(time2)
 
