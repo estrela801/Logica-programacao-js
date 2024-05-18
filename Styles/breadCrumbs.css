@@ -2,9 +2,9 @@ body{
     min-height: 100vh;
 }
 
-.migalha-de-pao{
+/* .migalha-de-pao{
     height: 50px;
-}
+} */
 .migalha-de-pao>ul{
     height: 100%;
     display: flex;

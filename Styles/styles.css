@@ -66,6 +66,13 @@ td{
 #codigo{
     width: 150px;
 }
+input{
+    border-radius: 8px;
+    background-color: rgb(127, 168, 255);
+    padding-left: 8px;
+    outline: blue;
+    line-height: 0px;
+}
 
 
 

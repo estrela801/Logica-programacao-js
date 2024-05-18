@@ -12,10 +12,12 @@ TVs: de 1921px ao infinito
   /* ------------  GERAL ------------ */
   body {
     margin-bottom: 200px;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
   }
   .titulo-pagina,h2 {
     width: 100px;
@@ -25,13 +27,18 @@ TVs: de 1921px ao infinito
   header {
    position: absolute;
    transform: translateX(200%);
-   display: none;
+   background-color: white;
   }
   .migalha-de-pao {
+    display: none;
+    position: absolute;
+    top: -380px;
+    right: -300px;
     width: inherit;
     order: 1;
-    margin: 0 0 300px 0;
-    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .migalha-de-pao li:not(:last-child):after {
     content: "";
@@ -39,29 +46,36 @@ TVs: de 1921px ao infinito
   ul {
     display: flex;
     flex-flow: column;
+    
   }
   li a {
     width: 50px;
-    border: 2px solid black;
+    background-color:rgba(0, 0, 0, 0.279);
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
-  }
-  ul,
-  li,
-  a {
-    /* width: 30px; */
-    height: 10px;
-    margin: 10px 10px;
     /* padding: 20px; */
+  }
+  li:last-child{
+    /* width: 50px; */
+    background-color:rgba(0, 0, 0, 0.279);
+    border-radius: 10px;
+    text-align: center;
+  }
+  li
+   {
+    /* width: 30px; */
+    /* height: 10px; */
+    color: white;
+    margin: 5px;
   }
   .migalha-de-pao li:last-child > a {
     background-color: transparent;
     color: black;
   }
-  a {
-    line-height: 12px;
+  a{
+    padding:500px;
   }
+ 
   p {
     font-size: 1rem;
   }
@@ -118,11 +132,19 @@ TVs: de 1921px ao infinito
     display: inline-block;
     position: absolute;
     top: 0;
+    order: 10;
     right: 30px;
     background-color: grey;
   }
-  .mortrar{
-animation: mostrar 3s;
+  ul:last-child{
+
+  }
+
+/* menu hamburguer */
+
+  .mostrar{
+animation: mostrar 100ms ease-in-out forwards;
+display: block;
   }
   @keyframes mostrar {
     from{
