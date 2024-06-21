@@ -27,7 +27,7 @@ TVs: de 1921px ao infinito
   header {
    position: absolute;
    transform: translateX(200%);
-   background-color: white;
+   /* background-color: white; */
   }
   .migalha-de-pao {
     display: none;
@@ -143,13 +143,14 @@ TVs: de 1921px ao infinito
   .mostrar{
 animation: mostrar 100ms ease-in-out forwards;
 display: block;
+/* color: white; */
   }
   @keyframes mostrar {
     from{
-      transform: translateX(200%);
+      transform: translateX(100%);
     }
     to{
-      transform: translateX(-200%);
+      transform: translateX(-100%);
     }
   }
 }
