@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
   const links = [
     { rel: "stylesheet", href: "/Styles/reset.css", type: "text/css" },
     { rel: "stylesheet", href: "/Styles/styles.css", type: "text/css" },
@@ -13,4 +13,3 @@ document.addEventListener("DOMContentLoaded", () => {
     l.type = link.type
     document.head.appendChild(l);
   });
-});
