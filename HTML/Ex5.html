@@ -56,75 +56,68 @@
         <button type="button" id="limpar">Limpar</button>
       </div>
 
-      <p id="resultadoGasolina"></p>
-      <p id="resultadoAlcool"></p>
+      <p id="resultado"></p>
     </form>
   </body>
   <script>
-    document.querySelector("#calcular").addEventListener("click", () => {
-      const gasolina = parseFloat(document.querySelector("#gasolina").value);
-      const alcool = parseFloat(document.querySelector("#alcool").value);
-
-      const valorGasolina = DescontoGasolina(gasolina);
-      const valorAlcool = descontoAlcool(alcool);
-
-      document.querySelector("#resultadoGasolina").innerHTML = "Valor a pagar = " + valorGasolina;
-      document.querySelector("#resultadoAlcool").innerHTML ="Valor a pagar = " + valorAlcool;
-    });
-    
-  document.querySelector('#gasolina').addEventListener('focus', ()=>{
-    document.querySelector('label[for="alcool"]').style.display = 'none'
-    document.querySelector('#alcool').style.display = 'none'
-    document.querySelector("#resultadoAlcool").style.display = 'none'
-  })
+  document.querySelector("#gasolina").addEventListener("focus", () => {
+    document.querySelector('label[for="alcool"]').style.display = "none";
+    document.querySelector("#alcool").style.display = "none";
+  });
 
   // esconde os valores para tratamento de erros
-  document.querySelector('#alcool').addEventListener('focus', ()=>{
-    document.querySelector('label[for="gasolina"]').style.display = 'none'
-    document.querySelector('#gasolina').style.display = 'none'
-    document.querySelector("#resultadoGasolina").style.display = 'none'
-  })
+  document.querySelector("#alcool").addEventListener("focus", () => {
+    document.querySelector('label[for="gasolina"]').style.display = "none";
+    document.querySelector("#gasolina").style.display = "none";
+  });
 
+  function DescontoGasolina(gasolina) {
+    let msgGasolina;
 
-
-
-
-    function DescontoGasolina(gasolina) {
-      let msgGasolina;
-
-      if (gasolina >= 20) {
-        msgGasolina = gasolina - gasolina * (4 / 100);
-      } else if (gasolina < 20) {
-        msgGasolina = gasolina - gasolina * (6 / 100);
-      }
-
-      
-      return msgGasolina;
+    if (gasolina >= 20) {
+      msgGasolina = gasolina - gasolina * (4 / 100);
+    } else {
+      msgGasolina = gasolina - gasolina * (6 / 100);
     }
 
-    function descontoAlcool(alcool) {
-      let msgAlcool;
-      if (alcool > 20) {
-        msgAlcool = alcool - alcool * (3 / 100);
-      } else if (alcool <= 20) {
-        msgAlcool = alcool - alcool * (5 / 100);
-      }
-      return msgAlcool;
+    document.querySelector("#resultado").innerHTML = `Valor a pagar = ${msgGasolina.toFixed(2)}`;
+  }
+
+  function DescontoAlcool(alcool) {
+    let msgAlcool;
+    if (alcool > 20) {
+      msgAlcool = alcool - alcool * (3 / 100);
+    } else {
+      msgAlcool = alcool - alcool * (5 / 100);
     }
+    document.querySelector("#resultado").innerHTML = `Valor a pagar = ${msgAlcool.toFixed(2)}`;
+  }
 
-    document.querySelector("#limpar").addEventListener("click", () => {
-       document.querySelector('#gasolina').value = ''
-       document.querySelector('#alcool').value = ''
+  document.querySelector("#calcular").addEventListener("click", () => {
+    const gasolina = parseFloat(document.querySelector("#gasolina").value) || 0;
+    const alcool = parseFloat(document.querySelector("#alcool").value) || 0;
 
-      document.querySelector("#resultadoAlcool").innerHTML = "";
-      document.querySelector("#resultadoGasolina").innerHTML = "";
+    if (gasolina > 0) {
+      DescontoGasolina(gasolina);
+    } else if (alcool > 0) {
+      DescontoAlcool(alcool);
+    } else {
+      document.querySelector("#resultado").innerHTML = "Por favor, insira um valor válido.";
+    }
+  });
 
-      document.querySelector('label[for="alcool"]').style.display = 'inline'
-      document.querySelector('#alcool').style.display = 'inline'
-      document.querySelector('label[for="gasolina"]').style.display = 'inline'
-      document.querySelector('#gasolina').style.display = 'inline'
-        
-    });
-  </script>
+  // retorna os inputs
+  document.querySelector("#limpar").addEventListener("click", () => {
+    document.querySelector("#gasolina").value = "";
+    document.querySelector("#alcool").value = "";
+    document.querySelector("#resultado").innerHTML = "";
+
+    document.querySelector('label[for="alcool"]').style.display = "inline";
+    document.querySelector("#alcool").style.display = "inline";
+    document.querySelector('label[for="gasolina"]').style.display = "inline";
+    document.querySelector("#gasolina").style.display = "inline";
+  });
+</script>
+
   <script src="../Scripts/navbar.js"></script>
 </html>

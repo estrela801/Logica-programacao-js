@@ -1,163 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercício 6</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../Styles/reset.css" />
-    <link rel="stylesheet" href="../Styles/styles.css" />
-    <script src="/Scripts/estilos.js"></script>
-    <script src="/Scripts/responsividade.js"></script>
-    <style>
-      
-    </style>
-  </head>
-  <body>
-    <button type="button" class="btn-responsividade"></button>
-    <h1 class="titulo-pagina">Vendo uns produtos ai mano</h1>
-    <p>Arroz, Batata e Frango</p>
-    <!-- ===========TABELA DE CODIGOS -->
-    <div class="container-tabela">
-      <table>
-        <tr>
-          <td>Produtos</td>
-          <td>Codigos</td>
-          <td>Preços</td>
-        </tr>
-        <tr>
-          <td>Arroz</td>
-          <td>1</td>
-          <td>R$15</td>
-        </tr>
-        <tr>
-          <td>Batata</td>
-          <td>2</td>
-          <td>R$4</td>
-        </tr>
-        <tr>
-          <td>Frango</td>
-          <td>3</td>
-          <td>R$18</td>
-        </tr>
-      </table>
-      <!-- ============ TABELA DE DESCONTOS -->
-      <table>
-        <tr>
-          <td>Produtos</td>
-          <td>Descontos</td>
-        </tr>
-        <tr>
-          <td>3 até 5</td>
-          <td>2%</td>
-        </tr>
-        <tr>
-          <td>6 a 10</td>
-          <td>3%</td>
-        </tr>
-        <tr>
-          <td>mais que 10</td>
-          <td>5%</td>
-        </tr>
-      </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercício 6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Styles/reset.css" />
+  <link rel="stylesheet" href="../Styles/styles.css" />
+  <script src="/Scripts/estilos.js"></script>
+  <script src="/Scripts/responsividade.js"></script>
+  <style>
+    /* Adicione seu CSS aqui */
+  </style>
+</head>
+<body>
+  <button type="button" class="btn-responsividade"></button>
+  <h1 class="titulo-pagina">Vendo uns produtos ai mano</h1>
+  <p>Arroz, Batata e Frango</p>
+  <!-- ===========TABELA DE CODIGOS -->
+  <div class="container-tabela">
+    <table>
+      <tr>
+        <td>Produtos</td>
+        <td>Codigos</td>
+        <td>Preços</td>
+      </tr>
+      <tr>
+        <td>Arroz</td>
+        <td>1</td>
+        <td>R$15</td>
+      </tr>
+      <tr>
+        <td>Batata</td>
+        <td>2</td>
+        <td>R$4</td>
+      </tr>
+      <tr>
+        <td>Frango</td>
+        <td>3</td>
+        <td>R$18</td>
+      </tr>
+    </table>
+    <!-- ============ TABELA DE DESCONTOS -->
+    <table>
+      <tr>
+        <td>Produtos</td>
+        <td>Descontos</td>
+      </tr>
+      <tr>
+        <td>3 até 5</td>
+        <td>2%</td>
+      </tr>
+      <tr>
+        <td>6 a 10</td>
+        <td>3%</td>
+      </tr>
+      <tr>
+        <td>mais que 10</td>
+        <td>5%</td>
+      </tr>
+    </table>
+  </div>
+  <form action="">
+    <label for="codigo">Digite o código do Produto</label>
+    <input type="number" id="codigo" min="0" max="3" step="1" required autofocus placeholder="Digite o produto ai mano">
+    <label for="sla">Digite quantas unidades</label>
+    <input type="number" id="sla" min="0" step="1" placeholder="Digite quantas unidades">
+    <div class="container-butao">
+      <button type="button" id="desconto">Calcular desconto</button>
+      <button id="limpa" type="button">Limpar</button>
     </div>
-    <form action="">
-      <label for="codigo">Digite o codigo do Produto</label>
-      <input type="number" id="codigo" min="0" max="3" step="1" required autofocus placeholder="Digita o produto ai mano">
-      <label for="sla">Digite quantas unidades</label>
-      <input
-        type="number"
-        id="sla"
-        min="0"
-        step="1"
-        placeholder="Digite quantos unidades"
-      />
-<div class="container-butao">
-  
-        <button type="button" id="desconto">Calcular desconto</button>
-        <button id="limpa" type="button">Limpar</button>
-</div>
+    <p id="resultado"></p>
+  </form>
+</body>
+<script>
+  const produtos = [
+    { produto: 'Arroz', codigo: 1, preco: 15 },
+    { produto: 'Batata', codigo: 2, preco: 4 },
+    { produto: 'Frango', codigo: 3, preco: 18 }
+  ];
 
-      <p id="resultado"></p>
-    </form>
-  </body>
-  <script>
-
-   
-
-   document.querySelector('#desconto').addEventListener('click', function  () {
-
-     
-     document.querySelector('#resultado').innerHTML = produtos.valorFinal.toFixed(2)
-     const codigoP = document.querySelector('#codigo')        
-     const quantidade = parseFloat(document.querySelector('#sla').value);
-     
-     
-
-     let msg
-     let produtos = [
-       {
-         produto: 'Arroz',
-         codigo: 1,
-         preco: 15
-        },
-        {
-          produto: 'Batata',
-          codigo: 2,
-          preco: 4,
-        },
-        {
-          produto: 'Frango',
-          codigo: 3,
-          preco: 18,
-        }
-        
-      ]
-      
-    })
-
-    function calculaDesconto(quantidade, codigoP ){
-
-    
+  function calculaDesconto(quantidade, codigoP) {
     let preco;
     let descricao;
     let desconto;
     let valorFinal;
-    
-    for(i=0; i > produtos.lenght; i++){
 
+    for (let i = 0; i < produtos.length; i++) {
+      if (produtos[i].codigo == codigoP) {
+        descricao = produtos[i].produto;
+        preco = produtos[i].preco;
+      }
+    }
 
-            if(produtos[i].codigo === codigoP){
-                preco = produtos[i].descricao;
-                preco = produtos[i].preco;
+    if (quantidade >= 3 && quantidade <= 5) {
+      desconto = 0.02;
+    } else if (quantidade >= 6 && quantidade <= 10) {
+      desconto = 0.03;
+    } else if (quantidade > 10) {
+      desconto = 0.05;
+    } else {
+      desconto = 0;
+    }
 
+    valorFinal = (preco * quantidade) - (preco * quantidade * desconto);
 
-            }
+    return {
+      codigoP: codigoP,
+      preco: preco,
+      descricao: descricao,
+      valorFinal: valorFinal
+    };
+  }
 
-            if(quantidade > 3 && quantidade < 5){
-              desconto = 0.02
-            } else if(quantidade >=6 && quantidade <= 10){
-              desconto = 0.03
-            }else if(quantidade > 10){
-              desconto = 0.05
-            }else{
-              desconto = 0
-            }
+  document.querySelector('#desconto').addEventListener('click', function () {
+    const codigoP = parseInt(document.querySelector('#codigo').value);
+    const quantidade = parseFloat(document.querySelector('#sla').value);
 
-              valorFinal = (preco * quantidade) - (preco * quantidade * desconto)
+    if (isNaN(codigoP) || isNaN(quantidade)) {
+      document.querySelector('#resultado').innerHTML = "Por favor, insira valores válidos.";
+      return;
+    }
 
-              return {
-                codigoP:codigo,
-                preco:preco,
-                descricao:descricao,
-                valorFinal:valorFinal
-              }
-          };
-        }
+    const resultado = calculaDesconto(quantidade, codigoP);
+    document.querySelector('#resultado').innerHTML = `Produto: ${resultado.descricao} <br> Valor a pagar = R$ ${resultado.valorFinal.toFixed(2)}`;
+  });
 
-  </script>
-  <script src="../Scripts/navbar.js"></script>
+  document.querySelector('#limpa').addEventListener('click', function () {
+    document.querySelector('#codigo').value = "";
+    document.querySelector('#sla').value = "";
+    document.querySelector('#resultado').innerHTML = "";
+  });
+</script>
+<script src="../Scripts/navbar.js"></script>
 </html>
