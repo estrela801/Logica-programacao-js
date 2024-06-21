@@ -53,7 +53,7 @@ linkNavBar.setAttribute('rel', 'stylesheet')
 linkNavBar.setAttribute('href', '../Styles/breadCrumbs.css')
 document.head.insertAdjacentElement("beforeEnd", linkNavBar)
 
-document.querySelector('[href="/Styles/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavBar)
+document.querySelector('[href="public/Styles/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavBar)
 
 document.querySelector('.btn-responsividade').innerHTML = 'Exs'
 document.querySelector('.btn-responsividade').setAttribute('onclick', 'mostrar()')
