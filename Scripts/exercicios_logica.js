@@ -47,4 +47,69 @@ function reverseString(s){
     return s.split('').reverse().join('')
 }
 const a = reverseString('rodrigo')
-console.log(a);
+// console.log(a);
+
+function SomaPar(n){
+    let numeros = []
+    for(let i = 1; i <= n; i++){
+        if(i%2===0){
+            numeros.push(i)
+        }
+    }
+    console.log( numeros, numeros.reduce((acc, value) => acc +value, 0))
+}
+
+// SomaPar(12)
+
+function verificaPalindromo(s){
+    const ns = s.split('').reverse().join('')
+    if(s === ns) return console.log("É um palindromo")
+    else return console.log("Não é um palindromo")
+}
+
+// verificaPalindromo("araa")
+
+function verificaNumeroTriangular(n){
+    const num = 1 + 8 * n
+    let raiz = Math.sqrt(num)
+
+    if(Number.isInteger(raiz)){
+        let n = (-1 + raiz) / 2;
+        return n > 0;
+    }
+    return console.log("sla");
+    
+}
+
+// console.log(verificaNumeroTriangular(6))
+
+
+function verificaOrdem(n){
+for(let i = 0; i < n.length - 1; i++){
+    if(n[i]>n[i+1]){
+        return false
+    }    
+}
+
+return true
+}
+
+// console.log(verificaOrdem([7,4,4,4,5,6,7]));
+
+const transacoes = [
+    { valor: 100, categoria: 'alimentação' },
+    { valor: 50, categoria: 'transporte' },
+    { valor: 200, categoria: 'alimentação' },
+    { valor: 150, categoria: 'saúde' },
+    { valor: 80, categoria: 'transporte' },
+]
+function sla(data, filter){
+    let newData = []
+    data.forEach(el =>{
+        if(el == filter) newData.push(el)
+    })
+    console.log(newData);
+    
+}
+sla(transacoes, 'alimentação')
+
